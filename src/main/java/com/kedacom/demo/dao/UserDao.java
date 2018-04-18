@@ -3,6 +3,7 @@ package com.kedacom.demo.dao;
 import java.util.List;
 
 import com.kedacom.demo.model.User;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 @Repository
@@ -53,4 +54,6 @@ public interface UserDao {
      * @return
      */
     List<User> getOnlineUser();
+
+    List<User> getQueryUser(@Param("userName") String name, @Param("userStatus") Integer status);
 }

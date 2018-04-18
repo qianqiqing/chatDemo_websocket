@@ -44,7 +44,7 @@ public class AuthFilter implements Filter {
 			} else {
 				arg2.doFilter(request, response);
 			}
-		} else if (requestUrl.contains(".css") || requestUrl.contains(".js")) {
+		} else if (requestUrl.indexOf(".") > 0) {
 			arg2.doFilter(arg0, arg1);
 		} else {
 			if (reUrl[reUrl.length-1].equals(ConstantDefine.FILTER_URL) || initUrlList.contains(reUrl[reUrl.length-1])) {

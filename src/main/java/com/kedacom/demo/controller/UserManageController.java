@@ -1,18 +1,24 @@
 package com.kedacom.demo.controller;
 
+import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.kedacom.demo.common.utils.FileOperateUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.kedacom.demo.model.User;
@@ -36,6 +42,14 @@ public class UserManageController {
 	@RequestMapping (value = "/userListIndex")
 	public ModelAndView userListIndex() {
 		ModelAndView view = new ModelAndView("userManage/userListIndex");
+		return view;
+	}
+
+	@RequestMapping (value = "/queryList")
+	public ModelAndView queryList(@RequestParam String name, @RequestParam Integer status) {
+		List<User> userList = userManageService.getUserList(name, status);
+		ModelAndView view = new ModelAndView("userManage/userContent");
+		view.addObject("userList",userList);
 		return view;
 	}
 
@@ -64,12 +78,40 @@ public class UserManageController {
 		return view;
 	}
 
+	@RequestMapping (value = "/editUserIndex" , method = RequestMethod.GET)
+	public ModelAndView editUserIndex(@RequestParam Integer userId) {
+		ModelAndView view = new ModelAndView("userManage/editUserIndex");
+		User user = userManageService.getUserById(userId);
+		view.addObject("user",user);
+		return view;
+	}
+
+	@RequestMapping (value = "/createUserIndex" , method = RequestMethod.GET)
+	public ModelAndView createUserIndex() {
+		ModelAndView view = new ModelAndView("userManage/createUserIndex");
+		return view;
+	}
+
 	@RequestMapping (value = "/loadUser" , method = RequestMethod.GET)
 	public ModelAndView loadUser(@RequestParam int userId) {
 		ModelAndView view = new ModelAndView("userManage/userContent");
 		User user = userManageService.getUserById(userId);
 		view.addObject("user", user);
 		return view;
+	}
+
+	@RequestMapping (value = "/initImage")
+	public ModelAndView initImage(@RequestParam Integer userId) {
+		String imagePath = null;
+		 ModelAndView view = new ModelAndView("/userManage/imageIndex");
+		 User user = userManageService.getUserById(userId);
+		 if (user != null) {
+			 imagePath = user.getPhoto();
+		 } else {
+		 	imagePath = "";
+		 }
+		 view.addObject("imagePath",imagePath);
+		 return view;
 	}
 
 	/**
@@ -106,8 +148,13 @@ public class UserManageController {
 	@ResponseBody
 	public int modifyUser(User user){
 		userManageService.modifyUser(user);
-
 		return user.getId();
+	}
+
+	@RequestMapping (value = "/deleteUser" , method = RequestMethod.POST)
+	@ResponseBody
+	public void deleteUser(@RequestParam Integer userId) {
+		userManageService.deleteById(userId);
 	}
 
 	/**
@@ -126,6 +173,21 @@ public class UserManageController {
 		return new ResponseEntity<String>("创建用户成功！", HttpStatus.OK);
 	}
 
+	@RequestMapping(value = "/uploadImage")
+	@ResponseBody
+	public String uploadImage(@RequestParam(value = "file", required = false) MultipartFile file,
+							 @RequestParam(value = "userId", required = false) Integer userId,
+							 HttpServletRequest request,
+							 HttpSession session) {
+		String imagePath = FileOperateUtil.uploadFile(file, request, session);
+		User user = userManageService.getUserById(userId);
+		if (!StringUtils.isEmpty(imagePath) && user != null) {
+			user.setPhoto(imagePath);
+			userManageService.modifyUser(user);
+		}
+		return imagePath;
+	}
+
 	/**
 	 * 下载文件
 	 * @param response
@@ -134,8 +196,12 @@ public class UserManageController {
 	 */
 	@RequestMapping (value = "/downLoad")
 	@ResponseBody
-	public void downLoad(HttpServletResponse response, @RequestParam String fileName) throws UnsupportedEncodingException {
-		userManageService.downLoad(response, java.net.URLDecoder.decode(fileName,"UTF-8"));
+	public void downLoad(HttpServletResponse response, @RequestParam String fileName) {
+		try {
+			userManageService.downLoad(response, java.net.URLDecoder.decode(fileName,"UTF-8"));
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		}
 	}
 
 }

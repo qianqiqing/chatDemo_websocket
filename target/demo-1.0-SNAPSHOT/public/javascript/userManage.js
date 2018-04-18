@@ -1,18 +1,33 @@
 var UserManage = {
     init : function(){
-        $("#createUser").on("click",function(){
+        $("#create_user").on("click",function(){
+            $.ajax({
+                url : webDemo.formatUrl("/userManage/createUserIndex"),
+                data : {},
+                success : function(result){
+                    $("#edit-popup").html(result);
+                    $("#edit-popup").modal();
+                },
+                error : function(e){
 
+                }
+            });
+        });
+
+        $("#searchUser").on("click",function(){
+            UserManage.initTable();
         });
     },
 
     initTable : function(){
-        // var name = $("#user_name").val();
-        // var type = $("#onLine_type").val();
+        debugger
+        var name = $("#query_user_name").val();
+        var status = $("#query_online_type").val();
         $.ajax({
-            url : webDemo.formatUrl(""),
+            url : webDemo.formatUrl("/userManage/queryList"),
             data : {
                 name : name,
-                type : type
+                status : status
             },
             success : function(result){
                 $("#userBody").html(result);

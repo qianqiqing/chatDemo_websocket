@@ -6,7 +6,7 @@
 <!-- content start -->
 <html>
 	<div class="am-cf am-padding">
-		<div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">聊天室</strong> / <small>Personal information</small></div>
+		<div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">聊天室</strong> / <small>Chat Room</small></div>
 	</div>
 	<div class="admin-content">
 		<div class="" style="width: 80%;float:left;">

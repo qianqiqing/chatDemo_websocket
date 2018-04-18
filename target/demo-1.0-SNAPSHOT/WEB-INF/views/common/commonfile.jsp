@@ -1,11 +1,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="utf-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:set var="ctx" value="${pageContext.request.contextPath}"/>
-<link rel="stylesheet" href="http://cdn.amazeui.org/amazeui/2.7.2/css/amazeui.min.css">
-<link rel="stylesheet" href="http://cdn.amazeui.org/amazeui/2.7.2/css/amazeui.css">
-<link rel="stylesheet" href="http://cdn.amazeui.org/amazeui/2.7.2/css/admin.css">
+<link rel="stylesheet" href="${ctx}/public/css/amazeui.min.css">
+<link rel="stylesheet" href="${ctx}/public/css/amazeui.css">
 <script src="${ctx}/public/javascript/common/jquery.min.js"></script>
-<script src="http://cdn.amazeui.org/amazeui/2.7.2/js/amazeui.min.js"></script>
+<script src="${ctx}/public/assets/js/amazeui.min.js"></script>
 
 <script type="text/javascript">
     var path = '${ctx}';

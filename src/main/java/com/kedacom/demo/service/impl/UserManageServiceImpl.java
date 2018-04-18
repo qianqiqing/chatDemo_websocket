@@ -19,6 +19,7 @@ import com.kedacom.demo.common.wesocket.ChatRoom;
 import com.kedacom.demo.dao.UserDao;
 import com.kedacom.demo.model.User;
 import com.kedacom.demo.service.UserManageService;
+import org.springframework.util.StringUtils;
 
 /**
  * 管理用户的service实现类
@@ -49,6 +50,17 @@ public class UserManageServiceImpl implements UserManageService {
 	@Override
 	public User getUserById(int id) {
 		return userDao.selectByPrimaryKey(id);
+	}
+
+	@Override
+	public List<User> getUserList(String name, Integer status) {
+		List<User> allUser = userDao.getQueryUser(name,status);
+        return allUser;
+	}
+
+	@Override
+	public void deleteById(Integer id) {
+		userDao.deleteByPrimaryKey(id);
 	}
 
 	@Override

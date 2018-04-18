@@ -33,4 +33,18 @@ public interface UserManageService {
 	 * @return
 	 */
 	public User getUserById(int id);
+
+	/**
+	 * 条件查询用户列表
+	 * @param name
+	 * @param status
+	 * @return
+	 */
+	public List<User> getUserList(String name, Integer status);
+
+	/**
+	 * 删除用户
+	 * @param id
+	 */
+	public void deleteById(Integer id);
 }
