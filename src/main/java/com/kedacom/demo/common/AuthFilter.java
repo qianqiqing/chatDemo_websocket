@@ -26,10 +26,9 @@ public class AuthFilter implements Filter {
 	private String requestUrl;
 	private String initUrl;
 
+	@Override
 	public void doFilter(ServletRequest arg0, ServletResponse arg1,
 						 FilterChain arg2) throws IOException, ServletException {
-
-
 
 		HttpServletRequest request = (HttpServletRequest) arg0;
 		HttpServletResponse response = (HttpServletResponse) arg1;
@@ -61,6 +60,7 @@ public class AuthFilter implements Filter {
 
 	}
 
+	@Override
 	public void init(FilterConfig arg0) throws ServletException {
 		initUrl = arg0.getInitParameter("initUrl");
 	}

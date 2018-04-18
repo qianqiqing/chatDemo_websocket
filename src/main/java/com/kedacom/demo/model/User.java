@@ -9,6 +9,8 @@ public class User {
 	private String password;
 	
 	private String email;
+
+	private String phone;
 	
 	private String photo;
 	
@@ -81,7 +83,15 @@ public class User {
 	public void setStatus(Integer status) {
 		this.status = status;
 	}
-	
+
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
 	public User(){}
 	
 	public User(String name, String password){

@@ -1,77 +1,55 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="utf-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<c:set var="ctx" value="${pageContext.request.contextPath}"/>
 <%String path = request.getContextPath();%>
-<html>
-<head>
-	<script src="<%=path%>/public/javascript/common/reconnecting-websocket.min.js"></script>
-    <title>Chatroom|聊天室</title>
-    <jsp:include page="common/commonfile.jsp"/>
-</head>
-<body>
-<jsp:include page="common/header.jsp"/>
+<script src="<%=path%>/public/javascript/common/reconnecting-websocket.min.js"></script>
+<%--<jsp:include page="common/commonfile.jsp"/>--%>
 <!-- content start -->
-<div class="admin-content">
-    <div class="" style="width: 80%;float:left;">
-        <!--个人信息展示区  -->
-        <div style="width:25%;float:left">
-	        <section class="am-panel am-panel-default">
-			  <header class="am-panel-hd">
-			    <h3 class="am-panel-title">个人信息</h3>
-			  </header>
-			  <div style="height:500px;">
-			  <table class="am-table">
-			     <tbody id="loadUserser">
-			     
-			     </tbody>
-			  </table>
-			      <p>用户名: ${currentUser.name}</p>
-			      <p>邮箱: ${currentUser.email}</p>
-			      <p>账号角色 ： ${currentUser.role}</p>
-			      <p>所在分组 ： ${currentUser.group}</p>
-			</section>
-        </div>
-        <!--中间聊天部分  -->
-        <div style="float:right;width: 75%;">
-            <section class="am-panel am-panel-default">
-		        <!-- 聊天区 -->
-		        <div class="am-scrollable-vertical" id="chat-view" style="height: 400px;">
-		            <ul class="am-comments-list" id="chat">
-		            </ul>
-		        </div>
-		        <!-- 输入区 -->
-		        <div class="am-form-group am-form" >
-		            <textarea class="" id="message" name="message" rows="5"  placeholder="这里输入你想发送的信息..."></textarea>
-		        </div>
-		        <%--预览区--%>
-		        <div class="" style="float:left;">
-		            <input type="file" id="file">
-		        </div>
-		        <!-- 接收者 -->
-		        <div class="" style="float: left">
-		            <p class="am-kai">发送给  : <span id="sendto">全体成员</span><button class="am-btn am-btn-xs am-btn-danger" onclick="$('#sendto').text('全体成员')">复位</button></p>
-		        </div>
-		        <!-- 按钮区 -->
-		        <div class="am-btn-group am-btn-group-xs" style="float:right;">
-		            <button class="am-btn am-btn-default" type="button" onclick="sendMessage()"><span class="am-icon-commenting"></span> 发送文字</button>
-		            <button class="am-btn am-btn-default" type="file" onclick="sendFileOrImage('image')"><span class="am-icon-file-image-o"></span> 发送图片</button>
-		            <button class="am-btn am-btn-default" type="file" onclick="sendFileOrImage('file')"><span class="am-icon-file-image-o"></span> 发送文件</button>
-		            <button class="am-btn am-btn-default" type="button" onclick="clearConsole()"><span class="am-icon-trash-o"></span> 清屏</button>
-		        </div>
-	        </section>
-        </div>
-        
-    </div>
-    <!-- 列表区 -->
-    <div class="am-panel am-panel-default" style="float:right;width: 20%;">
-        <div class="am-panel-hd">
-            <h3 class="am-panel-title">在线列表 [<span id="onlinenum"></span>]</h3>
-        </div>
-        <ul class="am-list am-list-static am-list-striped" id="list">
-        </ul>
-    </div>
-</div>
+<html>
+	<div class="am-cf am-padding">
+		<div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">聊天室</strong> / <small>Personal information</small></div>
+	</div>
+	<div class="admin-content">
+		<div class="" style="width: 80%;float:left;">
+			<!--中间聊天部分  -->
+				<section class="am-panel am-panel-default">
+					<!-- 聊天区 -->
+					<div class="am-scrollable-vertical" id="chat-view" style="height: 70%;">
+						<ul class="am-comments-list" id="chat">
+						</ul>
+					</div>
+					<!-- 输入区 -->
+					<div class="am-form-group am-form" >
+						<textarea class="" id="message" name="message" rows="5"  placeholder="这里输入你想发送的信息..."></textarea>
+					</div>
+					<%--预览区--%>
+					<div class="" style="float:left;">
+						<input type="file" id="file">
+					</div>
+					<!-- 接收者 -->
+					<div class="" style="float: left">
+						<p class="am-kai">发送给  : <span id="sendto">全体成员</span><button class="am-btn am-btn-xs am-btn-danger" onclick="$('#sendto').text('全体成员')">复位</button></p>
+					</div>
+					<!-- 按钮区 -->
+					<div class="am-btn-group am-btn-group-xs" style="float:right;">
+						<button class="am-btn am-btn-default" type="button" onclick="sendMessage()"><span class="am-icon-commenting"></span> 发送文字</button>
+						<button class="am-btn am-btn-default" type="file" onclick="sendFileOrImage('image')"><span class="am-icon-file-image-o"></span> 发送图片</button>
+						<button class="am-btn am-btn-default" type="file" onclick="sendFileOrImage('file')"><span class="am-icon-file-image-o"></span> 发送文件</button>
+						<button class="am-btn am-btn-default" type="button" onclick="clearConsole()"><span class="am-icon-trash-o"></span> 清屏</button>
+					</div>
+				</section>
+			</div>
 
+		</div>
+		<!-- 列表区 -->
+		<div class="am-panel am-panel-default" style="float:right;width: 20%;">
+			<div class="am-panel-hd">
+				<h3 class="am-panel-title">在线列表 [<span id="onlinenum"></span>]</h3>
+			</div>
+			<ul class="am-list am-list-static am-list-striped" id="list">
+			</ul>
+		</div>
+	</div>
+</html>
 <!-- content end -->
 <script>
 	var imgData =null;
@@ -291,7 +269,7 @@
     	debugger
     	window.location.href = "<%=path%>/userManage/downLoad?fileName=" + encodeURI(encodeURI(fileName));
     };
-    
+
     /**
      * 加载个人信息页面
      */

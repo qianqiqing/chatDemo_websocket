@@ -36,9 +36,9 @@ public class LoginController {
 		User user = loginInfoService.validateUser(name, password);
 		if (user != null) {
 			session.setAttribute("currentUser", user);
-			return "index_test";
+			return "index";
 		} else if (session.getAttribute("currentUser") != null) {
-			return "index_test";
+			return "index";
 		} else {
 			return "login/login";
 		}

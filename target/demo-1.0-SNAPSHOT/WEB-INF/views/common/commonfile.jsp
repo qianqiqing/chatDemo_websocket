@@ -3,8 +3,16 @@
 <c:set var="ctx" value="${pageContext.request.contextPath}"/>
 <link rel="stylesheet" href="http://cdn.amazeui.org/amazeui/2.7.2/css/amazeui.min.css">
 <link rel="stylesheet" href="http://cdn.amazeui.org/amazeui/2.7.2/css/amazeui.css">
-<script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+<link rel="stylesheet" href="http://cdn.amazeui.org/amazeui/2.7.2/css/admin.css">
+<script src="${ctx}/public/javascript/common/jquery.min.js"></script>
 <script src="http://cdn.amazeui.org/amazeui/2.7.2/js/amazeui.min.js"></script>
-<script>
+
+<script type="text/javascript">
     var path = '${ctx}';
+	webDemo = {
+	    formatUrl: function (url) {
+	        return path + url;
+	    }
+	};
 </script>
+    
