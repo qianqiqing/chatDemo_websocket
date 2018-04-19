@@ -4,7 +4,7 @@
 <script src="${ctx}/demo/public/javascript/groupManage.js"></script>
 
 <div class="am-cf am-padding">
-    <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">用户列表</strong> / <small>User List</small></div>
+    <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">用户分组</strong> / <small>User List</small></div>
 </div>
 <div id="groupIndex">
     <div style="width: 20%;float: left">
@@ -15,18 +15,32 @@
         </section>
     </div>
     <div style="width: 78%; float: right">
-        <section class="am-panel am-panel-default">
-            <div id="groupDetail" class="am-panel-bd" style="height: 100%">
+        <form  style="height: 25%">
+            <fieldset>
+                <legend>分组详情</legend>
+                <div id="groupDetail" class="am-panel-bd">
 
-            </div>
-        </section>
+                </div>
+            </fieldset>
+        </form>
+
+        <form id="userField" style="height: 75%">
+
+        </form>
     </div>
 </div>
-<div class="am-popup" id="select-popup" style="width:800px;height:600px">
-
+<div class="am-modal am-modal-alert" tabindex="-1" id="selectTip">
+    <div class="am-modal-dialog">
+        <div class="am-modal-hd"><span>请选择至少一条数据</span></div>
+        <div class="am-modal-footer">
+            <span class="am-modal-btn">确定</span>
+        </div>
+    </div>
 </div>
 
 <%--<jsp:include page="../common/dialog.jsp" />--%>
 <script type="application/javascript">
      GroupManage.initTree();
+
+
 </script>

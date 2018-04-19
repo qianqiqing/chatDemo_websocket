@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.kedacom.demo.dao.UserGroupDao" >
+  <resultMap id="BaseResultMap" type="com.kedacom.demo.model.UserGroup" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="demo_user_id" property="demoUserId" jdbcType="INTEGER" />
+    <result column="demo_group_id" property="demoGroupId" jdbcType="INTEGER" />
+  </resultMap>
+
+  <sql id="Base_Column_List" >
+    id, demo_user_id, demo_group_id
+  </sql>
+
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from demo_user_group
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+
+  <select id="selectByGroupId" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+    select
+    <include refid="Base_Column_List" />
+    from demo_user_group
+    where demo_group_id = #{groupId,jdbcType=INTEGER}
+  </select>
+
+  <select id="selectByUserId" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+    select
+    <include refid="Base_Column_List" />
+    from demo_user_group
+    where demo_user_id = #{userId,jdbcType=INTEGER}
+  </select>
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from demo_user_group
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+
+  <insert id="insert" parameterType="com.kedacom.demo.model.UserGroup" >
+    insert into demo_user_group (id, demo_user_id, demo_group_id
+      )
+    values (#{id,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{groupId,jdbcType=INTEGER}
+      )
+  </insert>
+
+  <update id="updateByPrimaryKey" parameterType="com.kedacom.demo.model.UserGroup" >
+    update demo_user_group
+    set demo_user_id = #{userId,jdbcType=INTEGER},
+      demo_group_id = #{groupId,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+</mapper>

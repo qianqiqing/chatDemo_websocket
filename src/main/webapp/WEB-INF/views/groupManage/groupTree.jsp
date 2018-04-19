@@ -2,7 +2,6 @@
 <link rel="stylesheet" type="text/css" href="${ctx}/demo/public/css/themes/default/easyui.css">
 <link rel="stylesheet" type="text/css" href="${ctx}/demo/public/css/themes/icon.css">
 <link rel="stylesheet" type="text/css" href="${ctx}/demo/public/css/demo.css">
-<script src="${ctx}/demo/public/javascript/common/jquery.min.js"></script>
 <script type="text/javascript" src="${ctx}/demo/public/javascript/common/jquery.easyui.min.js"></script>
 <div class="">
     <ul id="tt" class="easyui-tree" data-options="
@@ -27,23 +26,69 @@
     <div onclick="removeit()" data-options="iconCls:'icon-remove'">删除</div>
 </div>
 <script type="text/javascript">
-    var tree = $("#tt");
-
+    //节点点击事件
     function treeClick(node) {
-        debugger
+        if(node.id != null){
+            groupDetail(node);
+            if(node.type == "group"){
+                selectUserList(node);
+            }
+        }
+    }
+
+    //创建分组
+    function append(){
+        var t = $('#tt');
+        var node = t.tree('getSelected');
+        $.ajax({
+            url : webDemo.formatUrl("/groupManage/groupDetail"),
+            data : {
+                id : node.id,
+                type : "create"
+            },
+            success : function(result){
+                $("#groupDetail").html(result);
+                $("#userFieldList").remove();
+            },
+            error : function(e){
+
+            }
+        });
+    }
+
+    //删除节点
+    function removeit(){
+        var node = $('#tt').tree('getSelected');
+        $.ajax({
+            url : webDemo.formatUrl("/groupManage/deleteGroup"),
+            type : "POST",
+            data : {
+                id : node.id
+            },
+            success : function(result){
+                GroupManage.initTree();
+            },
+            error : function(e){
+
+            }
+        });
+    }
+
+    function groupDetail(node){
         var url;
+        var data;
         if(node.type != null && node.type != ""){
             if(node.type == "group"){
                 url = "/groupManage/groupDetail";
+                data = {id : node.id,type : "edit"};
             }else{
-                url = "/userManage/baseInfoIndex";
+                url = "/groupManage/userDetail";
+                data = {id : node.id}
             }
         }
         $.ajax({
             url : webDemo.formatUrl(url),
-            data : {
-                id : node.id
-            },
+            data : data,
             success : function(result){
                 $("#groupDetail").html(result);
             },
@@ -53,28 +98,17 @@
         });
     }
 
-    function append(){
-        var t = $('#tt');
-        var node = t.tree('getSelected');
-        t.tree('append', {
-            parent: (node?node.target:null),
-            data: [{
-                text: 'new item1'
-            },{
-                text: 'new item2'
-            }]
+    function selectUserList(node){
+        $.ajax({
+            url : webDemo.formatUrl("/groupManage/selectListIndex"),
+            data : {},
+            success : function(result){
+                $("#userField").html(result);
+            },
+            error : function(e){
+
+            }
         });
     }
-    function removeit(){
-        var node = $('#tt').tree('getSelected');
-        $('#tt').tree('remove', node.target);
-    }
-    function collapse(){
-        var node = $('#tt').tree('getSelected');
-        $('#tt').tree('collapse',node.target);
-    }
-    function expand(){
-        var node = $('#tt').tree('getSelected');
-        $('#tt').tree('expand',node.target);
-    }
+
 </script>

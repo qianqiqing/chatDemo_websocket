@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.kedacom.demo.common.enums.OperatorEnum;
 import com.kedacom.demo.common.utils.FileOperateUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -48,9 +49,14 @@ public class UserManageController {
 	@RequestMapping (value = "/queryList")
 	public ModelAndView queryList(@RequestParam String name, @RequestParam Integer status, @RequestParam String type) {
 		List<User> userList = userManageService.getUserList(name, status);
-		ModelAndView view = new ModelAndView("userManage/userContent");
+		String viewName = null;
+		if (type.equals(OperatorEnum.USER_OPERATE.getName())) {
+			viewName = "userManage/userContent";
+		} else {
+			viewName = "groupManage/selectedList";
+		}
+		ModelAndView view = new ModelAndView(viewName);
 		view.addObject("userList" ,userList);
-		view.addObject("type", type);
 		return view;
 	}
 

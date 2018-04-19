@@ -1,6 +1,7 @@
 package com.kedacom.demo.controller;
 
 import com.alibaba.fastjson.JSONObject;
+import com.kedacom.demo.common.enums.OperatorEnum;
 import com.kedacom.demo.common.utils.JsonUtil;
 import com.kedacom.demo.model.Group;
 import com.kedacom.demo.model.GroupTree;
@@ -10,9 +11,7 @@ import com.kedacom.demo.service.UserManageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
@@ -42,10 +41,31 @@ public class GroupManageController {
     }
 
     @RequestMapping (value = "/groupDetail")
-    public ModelAndView groupDetail(@RequestParam Integer id){
-        Group group = groupManageService.getGroupById(id);
+    public ModelAndView groupDetail(@RequestParam Integer id, @RequestParam String type){
         ModelAndView view = new ModelAndView("groupManage/groupDetail");
-        view.addObject("group",group);
+        if (type.equals(OperatorEnum.CREATE.getName())) {
+            view.addObject("parentId",id);
+        } else {
+            Group group = groupManageService.getGroupById(id);
+            view.addObject("group",group);
+        }
+        view.addObject("type", type);
+        return view;
+    }
+
+    @RequestMapping (value = "/userDetail")
+    public ModelAndView userDetail(@RequestParam Integer id){
+        ModelAndView view = new ModelAndView("groupManage/userDetail");
+        User user = userManageService.getUserById(id);
+        view.addObject("user",user);
+        return view;
+    }
+
+    @RequestMapping (value = "/selectListIndex")
+    public ModelAndView selectListIndex (){
+        ModelAndView view = new ModelAndView("groupManage/selectedList");
+        List<User> userList = userManageService.getUserList("",null);
+        view.addObject("userList", userList);
         return view;
     }
 
@@ -62,5 +82,35 @@ public class GroupManageController {
         List<Group> groupList = groupManageService.getGroupList();
         List<GroupTree> groupTree = groupManageService.getTreeData(groupList);
         return JsonUtil.toJson(groupTree);
+    }
+
+    @RequestMapping (value = "/saveOrUpdate/{type}", method = RequestMethod.POST)
+    @ResponseBody
+    public void saveOrUpdate(@PathVariable("type") String type, Group group) {
+        try {
+            if (type.equals(OperatorEnum.CREATE.getName())) {
+                groupManageService.create(group);
+            } else {
+                groupManageService.update(group);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @RequestMapping (value = "/deleteGroup", method = RequestMethod.POST)
+    @ResponseBody
+    public void deleteGroup(@RequestParam Integer id){
+        try {
+            groupManageService.deleteGroup(id);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @RequestMapping (value = "/assignUser/{groupId}" ,method = RequestMethod.POST)
+    @ResponseBody
+    public void assignUser(@PathVariable("groupId") String groupId, @RequestBody List<Integer> ids) {
+        groupManageService.assignUser(Integer.valueOf(groupId), ids);
     }
 }

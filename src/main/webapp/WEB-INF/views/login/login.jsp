@@ -30,12 +30,6 @@
 <div class="am-g">
     <div class="am-u-lg-6 am-u-md-8 am-u-sm-centered">
         <h3>用户登录</h3>
-        <hr>
-        <div class="am-btn-group">
-            <a href="#" class="am-btn am-btn-secondary am-btn-sm"><i class="am-icon-github am-icon-sm"></i> Github</a>
-            <a href="#" class="am-btn am-btn-success am-btn-sm"><i class="am-icon-google-plus-square am-icon-sm"></i> Google+</a>
-            <a href="#" class="am-btn am-btn-primary am-btn-sm"><i class="am-icon-stack-overflow am-icon-sm"></i> stackOverflow</a>
-        </div>
         <br>
         <br>
 
@@ -45,7 +39,7 @@
             <br>
             <label for="password">密码:</label>
             <input type="password" name="password" id="password" value="">
-
+                <br>
             <div class="am-cf">
                 <input type="submit" id="submit" value="登 录" class="am-btn am-btn-primary am-btn-sm am-fl">
             </div>

@@ -18,5 +18,30 @@ public interface GroupManageService {
      */
     List<GroupTree> getTreeData(List<Group> groupList);
 
+    /**
+     * 根据id获得分组信息
+     * @param id
+     * @return
+     */
     Group getGroupById(Integer id);
+
+    /**
+     * 创建分组
+     * @param group
+     */
+    void create(Group group);
+
+    /**
+     * 更新
+     * @param group
+     */
+    void  update(Group group);
+
+    /**
+     * 删除分组
+     * @param id
+     */
+    void deleteGroup(Integer id);
+
+    void assignUser(Integer groupId, List<Integer> userIds);
 }
