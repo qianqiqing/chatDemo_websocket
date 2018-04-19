@@ -55,5 +55,18 @@ public interface UserDao {
      */
     List<User> getOnlineUser();
 
+    /**
+     * 条件查询用户列表
+     * @param name
+     * @param status
+     * @return
+     */
     List<User> getQueryUser(@Param("userName") String name, @Param("userStatus") Integer status);
+
+    /**
+     * 查询单个分组下的用户列表
+     * @param groupId
+     * @return
+     */
+    List<User> selectByGroupId(Integer groupId);
 }

@@ -10,6 +10,7 @@
     <link rel="apple-touch-icon-precomposed" href="${ctx}/public/assets/i/app-icon72x72@2x.png">
     <link rel="stylesheet" href="${ctx}/public/assets/css/amazeui.min.css"/>
     <link rel="stylesheet" href="${ctx}/public/assets/css/admin.css">
+
 </head>
 <body>
 <%--头部--%>
@@ -74,7 +75,6 @@
 <script src="${ctx}/public/assets/js/polyfill/respond.min.js"></script>
 <script src="${ctx}/public/assets/js/amazeui.legacy.js"></script>
 
-<script src="${ctx}/public/assets/js/jquery.min.js"></script>
 <script src="${ctx}/public/assets/js/amazeui.min.js"></script>
 <script src="${ctx}/public/assets/js/app.js"></script>
 <script>
@@ -89,7 +89,7 @@
         });
 
         $("#userGroup").on("click",function(){
-            doAjax("/userManage/userListIndex","");
+            doAjax("/groupManage/index","");
         });
 
         $("#chatroom").on("click",function(){
@@ -111,7 +111,7 @@
             url : webDemo.formatUrl("/userManage/baseInfoIndex"),
             type : "GET",
             data : {
-                userId : id
+                id : id
             },
             success : function(result){
                 $(".admin-main .admin-content").html(result);

@@ -19,7 +19,7 @@ var UserManage = {
         });
     },
 
-    initTable : function(){
+    initTable : function(type){
         debugger
         var name = $("#query_user_name").val();
         var status = $("#query_online_type").val();
@@ -27,7 +27,8 @@ var UserManage = {
             url : webDemo.formatUrl("/userManage/queryList"),
             data : {
                 name : name,
-                status : status
+                status : status,
+                type : "user"
             },
             success : function(result){
                 $("#userBody").html(result);

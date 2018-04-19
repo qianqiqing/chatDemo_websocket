@@ -3,7 +3,7 @@
 <c:if test="${!empty userList}">
     <c:forEach var="user" items="${userList}">
         <tr>
-            <td style="display: none;">${user.id}</td>
+            <td><input type="checkbox" value="${user.id}" /></td>
             <td>${user.name}</td>
             <td>
                 <c:if test="${user.status == 1}"><font color="green">在线</font></c:if>
@@ -15,14 +15,16 @@
             </td>
             <td>${user.phone}</td>
             <td>${user.email}</td>
-            <td>
-                <div class="am-btn-toolbar">
-                    <div class="am-btn-group am-btn-group-xs">
-                        <button onclick="edit_user('${user.id}')" class="am-btn am-btn-default am-btn-xs am-text-secondary" data-path="${user.id}"><span class="am-icon-pencil-square-o"></span> 编辑</button>
-                        <button onclick="del_user('${user.id}')" class="am-btn am-btn-default am-btn-xs am-text-danger" data-path="${user.id}"><span class="am-icon-trash-o"></span> 删除</button>
+            <c:if test="${type == 'user'}">
+                <td>
+                    <div class="am-btn-toolbar">
+                        <div class="am-btn-group am-btn-group-xs">
+                            <button onclick="edit_user('${user.id}')" class="am-btn am-btn-default am-btn-xs am-text-secondary" data-path="${user.id}"><span class="am-icon-pencil-square-o"></span> 编辑</button>
+                            <button onclick="del_user('${user.id}')" class="am-btn am-btn-default am-btn-xs am-text-danger" data-path="${user.id}"><span class="am-icon-trash-o"></span> 删除</button>
+                        </div>
                     </div>
-                </div>
-            </td>
+                </td>
+            </c:if>
         </tr>
     </c:forEach>
 </c:if>

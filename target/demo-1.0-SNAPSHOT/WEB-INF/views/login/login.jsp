@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
-    <title>Login Page | Amaze UI Example</title>
+    <title>Login Page</title>
     <jsp:include page="../common/commonfile.jsp"/>
     <style>
         .header {
@@ -45,19 +45,12 @@
             <br>
             <label for="password">密码:</label>
             <input type="password" name="password" id="password" value="">
-            <br>
-            <label for="remember-me">
-                <input id="remember-me" type="checkbox">
-                记住密码
-            </label>
-            <br />
+
             <div class="am-cf">
                 <input type="submit" id="submit" value="登 录" class="am-btn am-btn-primary am-btn-sm am-fl">
-                <input type="submit" id="forget" value="忘记密码 ^_^? " class="am-btn am-btn-default am-btn-sm am-fr">
             </div>
         </form>
         <hr>
-        <p>© 2014 AllMobilize, Inc. Licensed under MIT license.</p>
     </div>
 </div>
 </body>

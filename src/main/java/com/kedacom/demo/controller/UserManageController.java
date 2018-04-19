@@ -46,10 +46,11 @@ public class UserManageController {
 	}
 
 	@RequestMapping (value = "/queryList")
-	public ModelAndView queryList(@RequestParam String name, @RequestParam Integer status) {
+	public ModelAndView queryList(@RequestParam String name, @RequestParam Integer status, @RequestParam String type) {
 		List<User> userList = userManageService.getUserList(name, status);
 		ModelAndView view = new ModelAndView("userManage/userContent");
-		view.addObject("userList",userList);
+		view.addObject("userList" ,userList);
+		view.addObject("type", type);
 		return view;
 	}
 
@@ -64,9 +65,9 @@ public class UserManageController {
 	 * @return
 	 */
 	@RequestMapping (value = "/baseInfoIndex")
-	public ModelAndView baseInfoIndex(@RequestParam Integer userId) {
+	public ModelAndView baseInfoIndex(@RequestParam Integer id) {
 		ModelAndView view = new ModelAndView("userManage/baseInfoIndex");
-		User user = userManageService.getUserById(userId);
+		User user = userManageService.getUserById(id);
 		view.addObject("user",user);
 		return view;
 	}
@@ -112,32 +113,6 @@ public class UserManageController {
 		 }
 		 view.addObject("imagePath",imagePath);
 		 return view;
-	}
-
-	/**
-	 * 验证用户更新后是否需要更新session；修改用户名仅更新session；修改密码则需要重新登录
-	 * @param userId
-	 * @return
-	 */
-	@RequestMapping (value = "/validateSession" , method = RequestMethod.GET)
-	public ModelAndView loadUser(HttpSession session , @RequestParam int userId) {
-//		String jspUri;
-//		User currentUser = userManageService.getUserById(userId);
-//		User sessionUser = (User) session.getAttribute("currentUser");
-//		if (currentUser != null) {
-//			if (!currentUser.getPassword().equals(sessionUser.getPassword())) {
-//
-//			} else {
-//				if(!currentUser.getName().equals(sessionUser.getName())) {
-//
-//				} else {
-//					jspUri = "";
-//				}
-//			}
-//		} else {
-//			jspUri = "login/login";
-//		}
-		return null;
 	}
 
 	/**

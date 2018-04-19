@@ -9,6 +9,10 @@ import javax.servlet.http.HttpSession;
 import java.io.File;
 import java.io.IOException;
 
+/**
+ * 文件操作公共类
+ * @Author 钱其清
+ */
 public class FileOperateUtil {
 
     /**
@@ -21,7 +25,7 @@ public class FileOperateUtil {
      */
     public static String uploadFile(MultipartFile file,
                                     HttpServletRequest request,
-                                    HttpSession session){
+                                    HttpSession session) {
         String trueFilePath = null;    //保存在服务器中的路径
         String path = null;// 文件路径
         String type = null;// 文件类型

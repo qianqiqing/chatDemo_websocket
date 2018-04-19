@@ -15,26 +15,31 @@
   </resultMap>
 
   <select id="getAllUser" resultMap="BaseResultMap" resultType="com.kedacom.demo.model.User">
-       select * from user
+       select * from demo_user
   </select>
 
   <select id="getOnlineUser" resultMap="BaseResultMap" resultType="com.kedacom.demo.model.User">
-       select * from user where demo_user_status = 1
+       select * from demo_user where demo_user_status = 1
   </select>
 
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="com.kedacom.demo.model.User" >
       select *
-      from user
+      from demo_user
       where id = #{id,jdbcType=INTEGER}
   </select>
 
+    <select id="selectByGroupId" resultMap="BaseResultMap" resultType="com.kedacom.demo.model.User" parameterType="java.lang.Integer">
+            select u.* from demo_user u, demo_user_group up
+            where u.id = up.demo_user_id and up.demo_group_id = #{groupId,jdbcType=INTEGER}
+    </select>
+
   <select id="selectByName" resultMap="BaseResultMap" parameterType="java.lang.String">
-      select * from user
+      select * from demo_user
       where demo_user_name = #{name}
   </select>
 
   <select id="getQueryUser" resultMap="BaseResultMap">
-       select * from user where 1=1
+       select * from demo_user where 1=1
        <if test="userName != ''">
                and demo_user_name like  '%${userName}%'
        </if>
@@ -44,7 +49,7 @@
   </select>
 
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
-      delete from user
+      delete from demo_user
       where id = #{id,jdbcType=INTEGER}
   </delete>
 
@@ -52,14 +57,14 @@
       <selectKey resultType="java.lang.Integer" order="AFTER" keyProperty="id">
            SELECT LAST_INSERT_ID() AS id
       </selectKey>
-      insert into user (id,demo_user_name, demo_user_password, demo_user_email, demo_user_phone, demo_user_photo, demo_user_group, demo_user_role, demo_user_status)
+      insert into demo_user (id,demo_user_name, demo_user_password, demo_user_email, demo_user_phone, demo_user_photo, demo_user_group, demo_user_role, demo_user_status)
       values (#{id,jdbcType=INTEGER},#{name,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR},
         #{email,jdbcType=VARCHAR},#{phone,jdbcType=VARCHAR}, #{photo,jdbcType=VARCHAR}, #{group,jdbcType=INTEGER},
         #{role,jdbcType=INTEGER}, #{status,jdbcType=INTEGER})
   </insert>
 
   <update id="updateByPrimaryKey" parameterType="com.kedacom.demo.model.User" >
-      update user
+      update demo_user
       set demo_user_name = #{name,jdbcType=VARCHAR},
         demo_user_password = #{password,jdbcType=VARCHAR},
         demo_user_email = #{email,jdbcType=VARCHAR},

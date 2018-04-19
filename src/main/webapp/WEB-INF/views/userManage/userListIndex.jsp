@@ -40,7 +40,7 @@
             <table class="am-table am-table-striped am-table-hover table-main">
                 <thead>
                     <tr>
-                        <th style="display:none;">id</th>
+                        <th class="table-check"><input type="checkbox" /></th>
                         <th class="table-title">用户名</th>
                         <th class="table-title">是否在线</th>
                         <th class="table-title">用户权限</th>
