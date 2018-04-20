@@ -13,3 +13,5 @@
      demo_user_id int,#用户id
      demo_group_id int #分组id
   );
+
+整个分组详情用一个页面去做，根据操作不同显示不同的效果

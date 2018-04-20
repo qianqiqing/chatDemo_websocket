@@ -14,21 +14,14 @@
             </div>
         </section>
     </div>
+
     <div style="width: 78%; float: right">
-        <form  style="height: 25%">
-            <fieldset>
-                <legend>分组详情</legend>
-                <div id="groupDetail" class="am-panel-bd">
+        <section id="groupContent" class="am-panel am-panel-default">
+        </section>
 
-                </div>
-            </fieldset>
-        </form>
-
-        <form id="userField" style="height: 75%">
-
-        </form>
     </div>
 </div>
+
 <div class="am-modal am-modal-alert" tabindex="-1" id="selectTip">
     <div class="am-modal-dialog">
         <div class="am-modal-hd"><span>请选择至少一条数据</span></div>

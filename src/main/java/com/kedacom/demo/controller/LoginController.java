@@ -1,5 +1,7 @@
 package com.kedacom.demo.controller;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.apache.log4j.Logger;
@@ -8,11 +10,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.kedacom.demo.model.User;
 import com.kedacom.demo.service.LoginInfoService;
 import com.kedacom.demo.service.UserManageService;
+
+import java.io.IOException;
 
 @Controller
 @RequestMapping("/login")
@@ -42,5 +47,13 @@ public class LoginController {
 		} else {
 			return "login/login";
 		}
+	}
+
+	@RequestMapping (value = "/logOut", method = RequestMethod.GET)
+	public String logOut(HttpServletRequest request, HttpServletResponse response){
+		request.getSession().removeAttribute("currentUser");
+		request.getSession().invalidate();
+		String url = request.getContextPath();
+		return "redirect:" + url;
 	}
 }

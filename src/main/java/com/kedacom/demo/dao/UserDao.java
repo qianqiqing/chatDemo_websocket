@@ -63,6 +63,8 @@ public interface UserDao {
      */
     List<User> getQueryUser(@Param("userName") String name, @Param("userStatus") Integer status);
 
+    List<User> getNotInUser(List<Integer> ids);
+
     /**
      * 查询单个分组下的用户列表
      * @param groupId

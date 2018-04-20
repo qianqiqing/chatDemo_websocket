@@ -7,6 +7,7 @@ import com.kedacom.demo.model.Group;
 import com.kedacom.demo.model.GroupTree;
 import com.kedacom.demo.model.User;
 import com.kedacom.demo.service.GroupManageService;
+import com.kedacom.demo.service.UserGroupServie;
 import com.kedacom.demo.service.UserManageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -28,6 +29,9 @@ public class GroupManageController {
     @Autowired
     private UserManageService userManageService;
 
+    @Autowired
+    private UserGroupServie userGroupServie;
+
     @RequestMapping (value = "/index")
     public ModelAndView groupIndex() {
         ModelAndView view = new ModelAndView("groupManage/index");
@@ -42,11 +46,16 @@ public class GroupManageController {
 
     @RequestMapping (value = "/groupDetail")
     public ModelAndView groupDetail(@RequestParam Integer id, @RequestParam String type){
-        ModelAndView view = new ModelAndView("groupManage/groupDetail");
+        ModelAndView view = new ModelAndView("groupManage/groupContent");
         if (type.equals(OperatorEnum.CREATE.getName())) {
             view.addObject("parentId",id);
         } else {
+            //分组详情
             Group group = groupManageService.getGroupById(id);
+            //人员选择列表
+            List<User> selectedUser = userGroupServie.selectedUser(id);
+
+            view.addObject("userList",selectedUser);
             view.addObject("group",group);
         }
         view.addObject("type", type);
@@ -59,21 +68,6 @@ public class GroupManageController {
         User user = userManageService.getUserById(id);
         view.addObject("user",user);
         return view;
-    }
-
-    @RequestMapping (value = "/selectListIndex")
-    public ModelAndView selectListIndex (){
-        ModelAndView view = new ModelAndView("groupManage/selectedList");
-        List<User> userList = userManageService.getUserList("",null);
-        view.addObject("userList", userList);
-        return view;
-    }
-
-    @RequestMapping (value = "/assignUserIndex")
-    public String assignUser(Model model, @RequestParam Integer id) {
-        List<User> userList = userManageService.getUserList("",null);
-        model.addAttribute("userList", userList);
-        return "groupManage/assignUserIndex";
     }
 
     @RequestMapping (value = "/treeData")

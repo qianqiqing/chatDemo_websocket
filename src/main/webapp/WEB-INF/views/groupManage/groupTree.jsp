@@ -14,10 +14,12 @@
 				onContextMenu: function(e,node){
 					e.preventDefault();
 					$(this).tree('select',node.target);
-					$('#mm').menu('show',{
-						left: e.pageX,
-						top: e.pageY
-					});
+					if(node.type == 'group'){
+                        $('#mm').menu('show',{
+                            left: e.pageX,
+                            top: e.pageY
+                        });
+					}
 				}
 			"></ul>
 </div>
@@ -30,9 +32,6 @@
     function treeClick(node) {
         if(node.id != null){
             groupDetail(node);
-            if(node.type == "group"){
-                selectUserList(node);
-            }
         }
     }
 
@@ -47,8 +46,7 @@
                 type : "create"
             },
             success : function(result){
-                $("#groupDetail").html(result);
-                $("#userFieldList").remove();
+                $("#groupContent").html(result);
             },
             error : function(e){
 
@@ -90,7 +88,7 @@
             url : webDemo.formatUrl(url),
             data : data,
             success : function(result){
-                $("#groupDetail").html(result);
+                $("#groupContent").html(result);
             },
             error : function(e){
 

@@ -26,8 +26,7 @@
                     <span class="am-icon-users"></span> ${currentUser.name} <span class="am-icon-caret-down"></span>
                 </a>
                 <ul class="am-dropdown-content">
-                    <li><a href="#"><span class="am-icon-cog"></span> 设置</a></li>
-                    <li><a href="#"><span class="am-icon-power-off"></span> 退出</a></li>
+                    <li><a id="logout" href="#"><span class="am-icon-power-off"></span> 退出</a></li>
                 </ul>
             </li>
         </ul>
@@ -39,8 +38,10 @@
     <div class="admin-sidebar">
         <ul class="am-list admin-sidebar-list">
             <li><a id="baseInfo" href="#"><span class="am-icon-home"></span> 个人资料</a></li>
-            <li><a id="userList" href="#"><span class="am-icon-table"></span> 用户列表</a></li>
-            <li><a id="userGroup" href="#"><span class="am-icon-th"></span> 分组管理</a></li>
+            <c:if test="${currentUser.role == 1}">
+                <li><a id="userList" href="#"><span class="am-icon-table"></span> 用户列表</a></li>
+                <li><a id="userGroup" href="#"><span class="am-icon-th"></span> 分组管理</a></li>
+            </c:if>
             <li><a id="chatroom" href="#"><span class="am-icon-pencil-square-o"></span> 聊天室</a></li>
         </ul>
     </div>
@@ -53,22 +54,27 @@
     <!-- content end -->
 </div>
 <%--弹出框--%>
-<div class="am-modal am-modal-alert" tabindex="-1" id="success">
-    <div class="am-modal-dialog">
-        <div class="am-modal-hd"><span>操作成功！</span></div>
-        <div class="am-modal-footer">
-            <span class="am-modal-btn">确定</span>
-        </div>
-    </div>
-</div>
-<div class="am-modal am-modal-alert" tabindex="-1" id="failed">
-    <div class="am-modal-dialog">
-        <div class="am-modal-hd"><span>操作失败！</span></div>
-        <div class="am-modal-footer">
-            <span class="am-modal-btn">确定</span>
-        </div>
-    </div>
-</div>
+<%--<div class="am-modal am-modal-alert" tabindex="-1" id="success">--%>
+    <%--<div class="am-modal-dialog">--%>
+        <%--<div class="am-modal-hd"><span>操作成功！</span></div>--%>
+        <%--<div class="am-modal-footer">--%>
+            <%--<span class="am-modal-btn">确定</span>--%>
+        <%--</div>--%>
+    <%--</div>--%>
+<%--</div>--%>
+<%--<div class="am-modal am-modal-alert" tabindex="-1" id="failed">--%>
+    <%--<div class="am-modal-dialog">--%>
+        <%--<div class="am-modal-hd"><span>操作失败！</span></div>--%>
+        <%--<div class="am-modal-footer">--%>
+            <%--<span class="am-modal-btn">确定</span>--%>
+        <%--</div>--%>
+    <%--</div>--%>
+<%--</div>--%>
+
+<footer>
+    <hr>
+    <p class="am-padding-left"></p>
+</footer>
 <script src="${ctx}/public/javascript/common/jquery.min.js"></script>
 <script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
 <script src="${ctx}/public/assets/js/polyfill/rem.min.js"></script>
@@ -94,7 +100,22 @@
 
         $("#chatroom").on("click",function(){
             doAjax("/userManage/chatRoomIndex","");
+        });
+
+        $("#logout").on("click",function(){
+            $.ajax({
+                url : webDemo.formatUrl("/login/logOut"),
+                type : "GET",
+                data : {},
+                success : function(result){
+
+                },
+                error : function(e){
+
+                }
+            });
         })
+
     })
 
     var path = "${ctx}";

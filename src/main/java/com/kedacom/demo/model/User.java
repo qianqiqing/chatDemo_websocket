@@ -20,6 +20,8 @@ public class User {
 	
 	private Integer status;
 
+	private boolean selected;
+
 	public Integer getId() {
 		return id;
 	}
@@ -90,6 +92,14 @@ public class User {
 
 	public void setPhone(String phone) {
 		this.phone = phone;
+	}
+
+	public boolean isSelected() {
+		return selected;
+	}
+
+	public void setSelected(boolean selected) {
+		this.selected = selected;
 	}
 
 	public User(){}

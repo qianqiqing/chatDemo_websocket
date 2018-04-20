@@ -69,7 +69,7 @@
                     <div class="am-u-sm-9">
                         <select id="edit_role">
                             <option value="1" <c:if test="${user.role == 1}">selected</c:if>>管理员</option>
-                            <option value="0" <c:if test="${user.role == 0}">selected</c:if>>selected>普通用户</option>
+                            <option value="0" <c:if test="${user.role == 0}">selected</c:if>>普通用户</option>
                         </select>
                     </div>
                 </div>
