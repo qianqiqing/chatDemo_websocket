@@ -22,7 +22,6 @@ public class LoginInfoServiceImpl implements LoginInfoService {
 
 	@Override
 	public User validateUser(String name, String password) {
-		logger.info("测试logger");
 		try {
 			if (!StringUtils.isEmpty(name) && !StringUtils.isEmpty(password)) {
 				User user = userDao.selectByName(name);
