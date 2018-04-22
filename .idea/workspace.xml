@@ -6,120 +6,13 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
     <list default="true" id="11766dde-25e2-4106-836e-d317b7529992" name="Default" comment="前端框架重构">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/enums/MessageTypeEnum.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/utils/Base64OperateUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/wesocket/ChatServer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/controller/ChatRoomController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/controller/FileLoadController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/model/ChatContent.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/singleChat.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/public/javascript/common/amazeui.dialog.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/public/javascript/common/amazeui.dialog.min.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/wesocket/ChatRoom.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/UserGroupServie.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/impl/UserGroupServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin-table.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index_test.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/kedacom/demo/common/wesocket/ChatRoom.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/15240703806332.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/common/wesocket/ChatRoom.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/views/admin-table.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/views/index_test.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/loadFiles/1/15240719668751.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/loadFiles/1/15240726556372.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/loadFiles/1/15240737843951.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/loadFiles/1/15240740806831.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/loadFiles/1/15240741164541.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/loadFiles/1/15240741177201.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/loadFiles/1/15240742471652.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/loadFiles/1/1524102890875_timg.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/loadFiles/2/1524197628643_1.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/kedacom/demo/common/enums/OperatorEnum.class" afterPath="$PROJECT_DIR$/target/classes/com/kedacom/demo/common/enums/OperatorEnum.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/kedacom/demo/common/utils/ConstantDefine.class" afterPath="$PROJECT_DIR$/target/classes/com/kedacom/demo/common/utils/ConstantDefine.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/kedacom/demo/common/utils/FileOperateUtil.class" afterPath="$PROJECT_DIR$/target/classes/com/kedacom/demo/common/utils/FileOperateUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/kedacom/demo/common/utils/JsonUtil.class" afterPath="$PROJECT_DIR$/target/classes/com/kedacom/demo/common/utils/JsonUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/kedacom/demo/common/wesocket/HandshakeInterceptor.class" afterPath="$PROJECT_DIR$/target/classes/com/kedacom/demo/common/wesocket/HandshakeInterceptor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/kedacom/demo/common/wesocket/WebSocketConfig.class" afterPath="$PROJECT_DIR$/target/classes/com/kedacom/demo/common/wesocket/WebSocketConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/kedacom/demo/controller/GroupManageController.class" afterPath="$PROJECT_DIR$/target/classes/com/kedacom/demo/controller/GroupManageController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/kedacom/demo/controller/LoginController.class" afterPath="$PROJECT_DIR$/target/classes/com/kedacom/demo/controller/LoginController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/kedacom/demo/controller/UserManageController.class" afterPath="$PROJECT_DIR$/target/classes/com/kedacom/demo/controller/UserManageController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/kedacom/demo/model/Group.class" afterPath="$PROJECT_DIR$/target/classes/com/kedacom/demo/model/Group.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/kedacom/demo/model/GroupTree.class" afterPath="$PROJECT_DIR$/target/classes/com/kedacom/demo/model/GroupTree.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/kedacom/demo/model/User.class" afterPath="$PROJECT_DIR$/target/classes/com/kedacom/demo/model/User.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/kedacom/demo/model/UserGroup.class" afterPath="$PROJECT_DIR$/target/classes/com/kedacom/demo/model/UserGroup.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/kedacom/demo/service/UserManageService.class" afterPath="$PROJECT_DIR$/target/classes/com/kedacom/demo/service/UserManageService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/kedacom/demo/service/impl/GroupManageServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/kedacom/demo/service/impl/GroupManageServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/kedacom/demo/service/impl/LoginInfoServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/kedacom/demo/service/impl/LoginInfoServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/kedacom/demo/service/impl/UserManageServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/kedacom/demo/service/impl/UserManageServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/common/enums/OperatorEnum.class" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/common/enums/OperatorEnum.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/common/utils/ConstantDefine.class" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/common/utils/ConstantDefine.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/common/utils/FileOperateUtil.class" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/common/utils/FileOperateUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/common/utils/JsonUtil.class" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/common/utils/JsonUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/common/wesocket/HandshakeInterceptor.class" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/common/wesocket/HandshakeInterceptor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/common/wesocket/WebSocketConfig.class" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/common/wesocket/WebSocketConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/controller/GroupManageController.class" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/controller/GroupManageController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/controller/LoginController.class" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/controller/LoginController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/controller/UserManageController.class" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/controller/UserManageController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/model/Group.class" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/model/Group.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/model/GroupTree.class" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/model/GroupTree.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/model/User.class" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/model/User.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/model/UserGroup.class" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/model/UserGroup.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/service/UserManageService.class" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/service/UserManageService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/service/impl/GroupManageServiceImpl.class" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/service/impl/GroupManageServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/service/impl/LoginInfoServiceImpl.class" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/service/impl/LoginInfoServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/service/impl/UserManageServiceImpl.class" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/service/impl/UserManageServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/demo_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/demo_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo.iml" afterPath="$PROJECT_DIR$/demo.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/enums/OperatorEnum.java" afterPath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/enums/OperatorEnum.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/utils/ConstantDefine.java" afterPath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/utils/ConstantDefine.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/utils/FileOperateUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/utils/FileOperateUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/utils/JsonUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/utils/JsonUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/wesocket/HandshakeInterceptor.java" afterPath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/wesocket/HandshakeInterceptor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/wesocket/WebSocketConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/wesocket/WebSocketConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/controller/GroupManageController.java" afterPath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/controller/GroupManageController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/controller/LoginController.java" afterPath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/controller/LoginController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/controller/UserManageController.java" afterPath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/controller/UserManageController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/dao/UserDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/dao/UserDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/model/Group.java" afterPath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/model/Group.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/model/GroupTree.java" afterPath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/model/GroupTree.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/model/User.java" afterPath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/model/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/model/UserGroup.java" afterPath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/model/UserGroup.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/GroupManageService.java" afterPath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/GroupManageService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/LoginInfoService.java" afterPath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/LoginInfoService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/UserManageService.java" afterPath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/UserManageService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/impl/GroupManageServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/impl/GroupManageServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/impl/LoginInfoServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/impl/LoginInfoServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/impl/UserManageServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/impl/UserManageServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resource/logback.xml" afterPath="$PROJECT_DIR$/src/main/resource/logback.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resource/spring-config.xml" afterPath="$PROJECT_DIR$/src/main/resource/spring-config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resource/spring-context.xml" afterPath="$PROJECT_DIR$/src/main/resource/spring-context.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userManage/baseInfoIndex.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userManage/baseInfoIndex.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userManage/createUserIndex.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userManage/createUserIndex.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userManage/editUserIndex.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userManage/editUserIndex.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userManage/userContent.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userManage/userContent.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/logback.xml" afterPath="$PROJECT_DIR$/target/classes/logback.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring-config.xml" afterPath="$PROJECT_DIR$/target/classes/spring-config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring-context.xml" afterPath="$PROJECT_DIR$/target/classes/spring-context.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/logback.xml" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/logback.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/spring-config.xml" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/spring-config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/spring-context.xml" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/spring-context.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/views/index.jsp" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/views/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/views/userManage/baseInfoIndex.jsp" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/views/userManage/baseInfoIndex.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/views/userManage/createUserIndex.jsp" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/views/userManage/createUserIndex.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/views/userManage/editUserIndex.jsp" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/views/userManage/editUserIndex.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/views/userManage/userContent.jsp" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/views/userManage/userContent.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/web.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/kedacom/demo/service/UserGroupServie.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/kedacom/demo/service/impl/UserGroupServiceImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/service/UserGroupServie.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/service/impl/UserGroupServiceImpl.class" afterPath="" />
     </list>
-=======
-    <list default="true" id="11766dde-25e2-4106-836e-d317b7529992" name="Default" comment="前端框架重构" />
->>>>>>> 1ec51857709752e016a5b1847400a3477184dd11
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -127,17 +20,6 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_TABLE_DETAILS" value="true" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <expand />
-    <select />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -151,19 +33,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FileLoadController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/controller/FileLoadController.java">
+      <file leaf-file-name="LoginInfoServiceImpl.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/impl/LoginInfoServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="367">
-              <caret line="49" column="29" lean-forward="false" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-=======
-            <state relative-caret-position="506">
-              <caret line="31" column="13" lean-forward="true" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
->>>>>>> 1ec51857709752e016a5b1847400a3477184dd11
+            <state relative-caret-position="347">
+              <caret line="27" column="35" lean-forward="true" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -180,21 +55,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GroupManageServiceImpl.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GroupManageServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/impl/GroupManageServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="141" column="43" lean-forward="false" selection-start-line="141" selection-start-column="43" selection-end-line="141" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GroupManageService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/GroupManageService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
-              <caret line="54" column="19" lean-forward="false" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="19" />
+            <state relative-caret-position="368">
+              <caret line="144" column="9" lean-forward="true" selection-start-line="144" selection-start-column="9" selection-end-line="144" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -255,54 +120,10 @@
       </file>
     </leaf>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="FxmlFile" />
-        <option value="Interface" />
-        <option value="Enum" />
-        <option value="Jsp File" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>user_pic</find>
-      <find>selectByPrimaryKey</find>
-      <find>deleteByPrimaryKey</find>
-      <find>insert</find>
-      <find>updateByPrimaryKeySelective</find>
-      <find>select_user</find>
-      <find>&lt;%--groupManage.js--%&gt;</find>
-      <find>selectUserList</find>
-      <find>groupId</find>
-      <find>demo_group_adminId</find>
-      <find>demo_group_parentId</find>
-      <find>groupDetail</find>
-      <find>demoUserId</find>
-      <find>groupDeta</find>
-      <find>list</find>
-      <find>#list</find>
-      <find>onLineUserlist</find>
-      <find>addChat</find>
-      <find>textarea</find>
-      <find>sendMessage</find>
-      <find>loadFilePath</find>
-      <find>item</find>
-      <find>LOAD_FILE_PATH</find>
-      <find>fileTip</find>
-      <find>RequestMappingHandlerAdapter</find>
-      <find>initTree</find>
-      <find>common.jsp</find>
-      <find>createUser</find>
-      <find>edit_user</find>
       <find>userDao</find>
     </findStrings>
-    <replaceStrings>
-      <replace />
-      <replace>demo_admin_id</replace>
-    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -361,11 +182,11 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userManage/userContent.jsp" />
         <option value="$PROJECT_DIR$/src/main/resource/logback.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/impl/LoginInfoServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kedacom/demo/controller/UserManageController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/impl/UserManageServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/UserManageService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kedacom/demo/controller/GroupManageController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/impl/LoginInfoServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -374,25 +195,6 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="LogFilters">
-    <option name="FILTER_ERRORS" value="false" />
-    <option name="FILTER_WARNINGS" value="false" />
-    <option name="FILTER_INFO" value="true" />
-    <option name="FILTER_DEBUG" value="true" />
-    <option name="CUSTOM_FILTER" />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="userSettingsFile" value="D:\maven\conf\settings.xml" />
-      </MavenGeneralSettings>
-    </option>
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
@@ -421,10 +223,7 @@
       <select />
     </treeState>
   </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths />
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
@@ -453,6 +252,11 @@
             <path>
               <item name="chatDemo_websocket" type="b2602c69:ProjectViewProjectNode" />
               <item name="chatDemo_websocket" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chatDemo_websocket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chatDemo_websocket" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="chatDemo_websocket" type="b2602c69:ProjectViewProjectNode" />
@@ -605,29 +409,6 @@
       <pane id="Scratches" />
     </panes>
   </component>
-  <component name="PropertiesComponent">
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="F:/workspace/chatDemo_websocket_personnel" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\workspace\chatDemo_websocket\src\main\webapp\public" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\workspace\chatDemo_websocket\src\main\webapp\public\javascript\common" />
-      <recent name="D:\workspace\chatDemo_websocket\src\main\java\com\kedacom\demo\mapper" />
-      <recent name="E:\workspace\chatDemo_websocket\src\main\webapp\WEB-INF\views\groupManage" />
-      <recent name="E:\workspace\chatDemo_websocket\src\main\java\com\kedacom\demo\model" />
-      <recent name="E:\workspace\chatDemo_websocket\src\main\java\com\kedacom\demo\dao" />
-    </key>
-  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -641,6 +422,20 @@
     </option>
   </component>
   <component name="RunManager" selected="Tomcat Server.local">
+    <configuration default="true" type="Remote" factoryName="远程">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
@@ -666,7 +461,7 @@
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
@@ -674,6 +469,12 @@
       </option>
       <envs />
       <patterns />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -688,7 +489,7 @@
       <option name="TEST_OBJECT" value="CLASS" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <option name="OUTPUT_DIRECTORY" />
       <option name="ANNOTATION_TYPE" />
       <option name="ENV_VARIABLES" />
@@ -714,7 +515,7 @@
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="未命名_chatDemo_websocket" />
+        <option name="BASE_DIRECTORY_NAME" value="未命名_chatDemo_websocket_2" />
       </server-settings>
       <predefined_log_file id="Tomcat" enabled="true" />
       <predefined_log_file id="Tomcat Catalina" enabled="true" />
@@ -723,7 +524,7 @@
       <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="54986" />
+        <option name="DEBUG_PORT" value="65524" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -780,9 +581,6 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="11766dde-25e2-4106-836e-d317b7529992" name="Default" comment="" />
@@ -798,38 +596,19 @@
       <workItem from="1524053661158" duration="19745000" />
       <workItem from="1524100984565" duration="31554000" />
       <workItem from="1524145827888" duration="17128000" />
-<<<<<<< HEAD
       <workItem from="1524187275354" duration="15368000" />
-      <workItem from="1524401894792" duration="9693000" />
-=======
-      <workItem from="1524187275354" duration="16029000" />
->>>>>>> 1ec51857709752e016a5b1847400a3477184dd11
+      <workItem from="1524401894792" duration="10331000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-<<<<<<< HEAD
-    <option name="totallyTimeSpent" value="172735000" />
-=======
-    <option name="totallyTimeSpent" value="105216000" />
->>>>>>> 1ec51857709752e016a5b1847400a3477184dd11
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
+    <option name="totallyTimeSpent" value="173373000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-<<<<<<< HEAD
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="调色板" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -838,7 +617,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22828507" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22828507" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20824054" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -849,9 +628,9 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22974414" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22974414" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16926503" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43095767" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -859,49 +638,10 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-=======
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Application Servers" order="7" />
-      <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info id="Designer" />
-      <window_info anchor="right" id="Database" order="3" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.124105014" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info id="Image Layers" order="2" />
-      <window_info anchor="bottom" id="Java Enterprise" order="7" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24676375" />
-      <window_info id="Web" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3293556" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="right" id="调色板" order="3" />
-      <window_info id="设计师" order="2" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
->>>>>>> 1ec51857709752e016a5b1847400a3477184dd11
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="前端框架重构" />
@@ -984,7 +724,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/impl/LoginInfoServiceImpl.java</url>
-          <line>26</line>
+          <line>25</line>
           <properties />
           <option name="timeStamp" value="43" />
         </line-breakpoint>
@@ -1008,58 +748,7 @@
     </breakpoint-manager>
     <watches-manager />
   </component>
-  <component name="antWorkspaceConfiguration">
-    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
-    <option name="FILTER_TARGETS" value="false" />
-  </component>
-  <component name="debuggerHistoryManager">
-    <expressions id="evaluateExpression">
-      <expression>
-        <expression-string>request.getContextPath()+&quot;/login&quot;</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>&quot;[&quot;+JsonUtil.toJson(groupTree)+&quot;]&quot;</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>JSONObject.parseObject(JsonUtil.toJson(groupTree))</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>JsonUtil.toJson(groupTree)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>groupTree.toString()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>JSONObject.parseObject(groupTree.toString())</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>node.getId()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-    </expressions>
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/wesocket/ChatServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2195">
-          <caret line="83" column="5" lean-forward="true" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/wesocket/HandshakeInterceptor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="654">
@@ -1302,14 +991,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/impl/LoginInfoServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="19" column="14" lean-forward="true" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resource/logback.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="498">
@@ -1373,14 +1054,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/LoginInfoService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1463,106 +1136,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/impl/GroupManageServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="405">
-          <caret line="141" column="43" lean-forward="false" selection-start-line="141" selection-start-column="43" selection-end-line="141" selection-end-column="43" />
+        <state relative-caret-position="368">
+          <caret line="144" column="9" lean-forward="true" selection-start-line="144" selection-start-column="9" selection-end-line="144" selection-end-column="9" />
           <folding />
-=======
-        <state relative-caret-position="506">
-          <caret line="31" column="13" lean-forward="true" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
->>>>>>> 1ec51857709752e016a5b1847400a3477184dd11
         </state>
       </provider>
     </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <last-edited>demo:war exploded</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.5" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>Spring</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>demo</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.6</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>lib</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/LoginInfoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/impl/LoginInfoServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="27" column="35" lean-forward="true" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-837">
+          <caret line="164" column="51" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="164" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
