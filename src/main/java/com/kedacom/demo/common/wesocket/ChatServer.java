@@ -13,7 +13,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.kedacom.demo.common.enums.MessageTypeEnum;
+import com.kedacom.demo.common.utils.ConstantDefine;
+import com.kedacom.demo.common.utils.JsonUtil;
+import com.kedacom.demo.model.ChatContent;
 import org.apache.log4j.Logger;
+import org.springframework.stereotype.Controller;
+import org.springframework.util.StringUtils;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.socket.BinaryMessage;
 import org.springframework.web.socket.CloseStatus;
 import org.springframework.web.socket.TextMessage;
@@ -29,10 +36,9 @@ import com.kedacom.demo.model.User;
  * @author 钱其清
  *
  */
-public class ChatRoom extends AbstractWebSocketHandler {
+public class ChatServer extends AbstractWebSocketHandler {
     private Logger logger = Logger.getLogger(this.getClass());
 
-    public static final String loadFilePath = "D:\\loadFiles\\";
     private final static List<WebSocketSession> sessionList = Collections.synchronizedList(new ArrayList<WebSocketSession>());
     private static List<String> list = new ArrayList();                        //在线列表
     private static Map<String,WebSocketSession> routetab = new HashMap();      //用户名和session的对应map
@@ -55,15 +61,8 @@ public class ChatRoom extends AbstractWebSocketHandler {
             message = getMessage("[" + currentUser.getName() + "]加入聊天室", "notice",  list);
             broadcast(message);                                                      //广播通知
         } else {
-            message = getMessage("", "message", list);
-            for (WebSocketSession session : sessionList) {
-                User user = (User) webSocketSession.getAttributes().get("currentUser");      //webSocketSession中的用户
-                if (currentUser.getName().equals(user.getName())) {
-                    sendText(message, session);
-                }
-            }
+            list.add(currentUser.getName());
         }
-
     }
 
     /**
@@ -92,40 +91,21 @@ public class ChatRoom extends AbstractWebSocketHandler {
      */
     @Override
     public void handleTextMessage(WebSocketSession websocketsession, TextMessage message) {
+        //消息的json字符串
         String payload = message.getPayload();
-        JSONObject jsonObject = JSON.parseObject(payload);
-        JSONObject messageObject = JSON.parseObject(jsonObject.get("message").toString());
-        String type = jsonObject.get("type").toString();
-        String content = messageObject.get("content").toString();
-        TextMessage textMessage;
-        String htmlMessage;
+        //json字符串转成chatContent实体类
+        ChatContent chatContent = JsonUtil.toObject(ChatContent.class,payload);
         try {
-            if ("fileStart".equals(type)) {                                       //开始传输文件
-                File file = new File(loadFilePath);
-                if (!file.exists()) {
-                    file.mkdirs();
-                }
-                outPut=new FileOutputStream(new File(loadFilePath + content));    //在服务端制定路径创建新的文件
-            } else if ("fileFinish".equals(type)) {                               //文件传输结束
-                outPut.close();
-                if ("image".equals(messageObject.get("fileType").toString())) {   //如果是图片，返回客户端的是  文字信息+图片二进制，分两次发送
-                    htmlMessage = messageObject.get("from").toString() + " ("+format.format(new Date())+")" + " 说 :";
-                    textMessage = getMessage(htmlMessage, "message", null);
-
-                    sendMessage(textMessage, messageObject);
-                } else {                                                           //文件则发送一个可下载的文件名链接
-                    String html = "<a href=\"#\" onclick=\"downLoad('"+content+"')\">"+content+"</a></br>";
-                    htmlMessage = messageObject.get("from").toString() + " ("+format.format(new Date())+")" + " 发送文件 : " + html;
-                    textMessage = getMessage(htmlMessage, "message", null);
-
-                    sendMessage(textMessage, messageObject);
-                }
-
+            if (StringUtils.isEmpty(chatContent.getTo())) {      //如果to为空，发送给所有人;如果不为空,则对指定的用户发送消息
+                broadcast(message);
             } else {
-                htmlMessage = messageObject.get("from").toString() + " ("+format.format(new Date())+")" + " 说 : " + content +"</br>";
-                textMessage = getMessage(htmlMessage, "message", null);
-
-                sendMessage(textMessage, messageObject);
+                String [] userlist =chatContent.getTo().split(",");
+                sendText(message, (WebSocketSession) routetab.get(chatContent.getFrom()));//发送给自己,这个别忘了
+                for (String user : userlist) {
+                    if (!user.equals(chatContent.getFrom())) {
+                        sendText(message, (WebSocketSession) routetab.get(user));             //分别发送给每个指定用户
+                    }
+                }
             }
         } catch (Exception e) {
             logger.error("handleTextMessage exception:"+e);
@@ -172,37 +152,6 @@ public class ChatRoom extends AbstractWebSocketHandler {
     }
 
     /**
-     * 发送消息
-     * @description 如果是图片，返回客户端的是 发送人信息+图片二进制，分两次发送；如果是文件则返回文件的链接
-     */
-    private void sendMessage(TextMessage message, JSONObject messageObject) {
-        String fileType = messageObject.get("fileType").toString();
-        if (messageObject.get("to") == null || messageObject.get("to").equals("")) {      //如果to为空，发送给所有人;如果不为空,则对指定的用户发送消息
-            broadcast(message);
-            if ("image".equals(fileType)) {                                               //如果是图片，必须将图片的二进制数据传回客户端展示
-                //发送图片
-                for (WebSocketSession session : sessionList) {
-                    sendFile(messageObject.get("content").toString(), session);
-                }
-            }
-        } else {
-            String [] userlist = messageObject.get("to").toString().split(",");
-            sendText(message, (WebSocketSession) routetab.get(messageObject.get("from")));//发送给自己,这个别忘了
-            if ("image".equals(fileType)) {
-                sendFile(messageObject.get("content").toString(), (WebSocketSession) routetab.get(messageObject.get("from")));
-            }
-            for (String user : userlist) {
-                if (!user.equals(messageObject.get("from"))) {
-                    sendText(message, (WebSocketSession) routetab.get(user));             //分别发送给每个指定用户
-                    if ("image".equals(fileType)) {
-                        sendFile(messageObject.get("content").toString(), (WebSocketSession) routetab.get(user));
-                    }
-                }
-            }
-        }
-    }
-
-    /**
      * 发送文本信息
      * @param message
      * @param session
@@ -212,26 +161,6 @@ public class ChatRoom extends AbstractWebSocketHandler {
             session.sendMessage(message);
         } catch (Exception e) {
             logger.error("发送消息失败:"+e);
-        }
-    }
-
-    /**
-     * 发送文件的二级制信息；
-     * @param fileName
-     * @param session
-     */
-    private void sendFile(String fileName, WebSocketSession session) {
-        FileInputStream input;
-        try {
-            File file = new File(loadFilePath + fileName);
-            input = new FileInputStream(file);
-            byte bytes[] = new byte[(int) file.length()];
-            input.read(bytes);
-            BinaryMessage byteMessage = new BinaryMessage(bytes);
-            session.sendMessage(byteMessage);
-            input.close();
-        } catch (Exception e) {
-            e.printStackTrace();
         }
     }
 
@@ -250,7 +179,7 @@ public class ChatRoom extends AbstractWebSocketHandler {
     }
 
     /**
-     * 发送信息给所有人
+     * 组装通知消息及在线列表
      * @param message
      * @param type
      * @param list
@@ -264,5 +193,30 @@ public class ChatRoom extends AbstractWebSocketHandler {
         TextMessage textMessage = new TextMessage(member.toString());
         return textMessage;
     }
+
+//    /**
+//     * 发送文件的二级制信息；
+//     * @param fileName
+//     * @param session
+//     */
+//    private TextMessage buildImageMessage(String fileName,String message, WebSocketSession session) {
+//        FileInputStream input;
+//        TextMessage textMessage = null;
+//        JSONObject member = new JSONObject();
+//        member.put("message",message);
+//        try {
+//            File file = new File(fileName);
+//            input = new FileInputStream(file);
+//            byte bytes[] = new byte[(int) file.length()];
+//            input.read(bytes);
+//            BinaryMessage byteMessage = new BinaryMessage(bytes);
+//            member.put("blob",byteMessage);
+//            textMessage = new TextMessage(member.toString());
+//            input.close();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//        return textMessage;
+//    }
 
 }

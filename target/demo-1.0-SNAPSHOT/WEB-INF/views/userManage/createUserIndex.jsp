@@ -7,10 +7,38 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<style>
+    #vld-tooltip {
+        position: absolute;
+        z-index: 1000;
+        padding: 5px 10px;
+        background: #F37B1D;
+        min-width: 150px;
+        color: #fff;
+        transition: all 0.15s;
+        box-shadow: 0 0 5px rgba(0,0,0,.15);
+        display: none;
+    }
+
+    #vld-tooltip:before {
+        position: absolute;
+        top: -8px;
+        left: 50%;
+        width: 0;
+        height: 0;
+        margin-left: -8px;
+        content: "";
+        border-width: 0 8px 8px;
+        border-color: transparent transparent #F37B1D;
+        border-style: none inset solid;
+    }
+</style>
+
 <input type="hidden" id="userId" value="${user.id}" />
-<div class="am-popup-inner">
+<div class="am-popup-inner" id="createCreate">
     <div class="am-popup-hd">
-        <h4 class="am-popup-title">编辑用户</h4>
+        <h4 class="am-popup-title">新增用户</h4>
         <span data-am-modal-close
               class="am-close">
 	      </span>
@@ -75,23 +103,52 @@
                 "phone" : $("#edit_user #phone").val(),
                 "role" : $("#edit_user #role").val(),
             };
-
-            $.ajax({
-                url : webDemo.formatUrl("/userManage/createUser"),
-                type: "POST",
-                data : user,
-                success : function(result){
-                    debugger
-                    $("#edit-popup").modal('close');
-                    $("#success").modal();
-                    UserManage.initTable();
-                },
-                error : function(e){
-                    debugger
-                    $("#edit-popup").modal('close');
-                    $("#failed").modal();
-                }
-            })
+            if(validate(user)){
+                $.ajax({
+                    url : webDemo.formatUrl("/userManage/createOrUpdateUser"),
+                    type: "POST",
+                    data : user,
+                    success : function(result){
+                        if(result){
+                            $("#alertTip .am-modal-hd span").html("用户名已存在");
+                            $("#alertTip").modal();
+                        }else{
+                            $("#edit-popup").modal('close');
+                            $("#success").modal();
+                            UserManage.initTable();
+                        }
+                    },
+                    error : function(e){
+                        debugger
+                        $("#edit-popup").modal('close');
+                        $("#failed").modal();
+                    }
+                })
+            }
         });
-    })
+    });
+
+    function validate(obj){
+        var flag = true;
+        if(obj.name == ""){
+            $("#alertTip .am-modal-hd span").html("用户名不能为空");
+            $("#alertTip").modal();
+            flag = false;
+        }else if(obj.password == ""){
+            $("#alertTip .am-modal-hd span").html("密码不能为空");
+            $("#alertTip").modal();
+            flag = false;
+        }else{
+            if(obj.email != ""){
+                var myreg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+                if(!myreg.test(obj.email)){
+                    $("#alertTip .am-modal-hd span").html("邮箱格式不正确");
+                    $("#alertTip").modal();
+                    flag = false;
+                }
+            }
+        }
+        return flag;
+    }
+
 </script>

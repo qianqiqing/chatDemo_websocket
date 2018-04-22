@@ -11,6 +11,12 @@ import java.io.IOException;
 public class JsonUtil {
     private static final ObjectMapper objectMapper = new ObjectMapper();
 
+    /**
+     * Object转换json字符串
+     * @param t
+     * @param <T>
+     * @return
+     */
     public static <T> String toJson(T t) {
         String str = null;
         try {
@@ -21,6 +27,13 @@ public class JsonUtil {
         return str;
     }
 
+    /**
+     * json字符串转Object
+     * @param clazz
+     * @param str
+     * @param <T>
+     * @return
+     */
     public static <T> T toObject (Class<T> clazz, String str) {
         T object = null;
         try {

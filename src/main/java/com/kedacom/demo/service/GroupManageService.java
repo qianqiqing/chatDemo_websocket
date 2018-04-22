@@ -5,6 +5,10 @@ import com.kedacom.demo.model.GroupTree;
 
 import java.util.List;
 
+/**
+ * 分组管理接口
+ * @author 钱其清
+ */
 public interface GroupManageService {
     /**
      * 查询分组列表
@@ -43,5 +47,10 @@ public interface GroupManageService {
      */
     void deleteGroup(Integer id);
 
+    /**
+     * 为组分配用户
+     * @param groupId
+     * @param userIds
+     */
     void assignUser(Integer groupId, List<Integer> userIds);
 }

@@ -6,8 +6,8 @@
             <td><input id="user_selected" type="checkbox" value="${user.id}" /></td>
             <td>${user.name}</td>
             <td>
-                <c:if test="${user.status == 1}"><font color="green">在线</font></c:if>
-                <c:if test="${user.status == 0}"><font color="red">离线</font></c:if>
+                <c:if test="${user.status == 1}"><font color="green">已登录</font></c:if>
+                <c:if test="${user.status == 0}"><font color="red">未登录</font></c:if>
             </td>
             <td>
                 <c:if test="${user.role == 1}">管理员</c:if>

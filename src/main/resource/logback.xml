@@ -1,6 +1,6 @@
 <configuration scan="true" scanPeriod="30 seconds">
 
-    <property name="APP_NAME" value="energysaving"/>
+    <property name="APP_NAME" value="demo"/>
 
     <!--console-->
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">

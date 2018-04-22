@@ -54,28 +54,44 @@
     <!-- content end -->
 </div>
 <%--弹出框--%>
-<%--<div class="am-modal am-modal-alert" tabindex="-1" id="success">--%>
-    <%--<div class="am-modal-dialog">--%>
-        <%--<div class="am-modal-hd"><span>操作成功！</span></div>--%>
-        <%--<div class="am-modal-footer">--%>
-            <%--<span class="am-modal-btn">确定</span>--%>
-        <%--</div>--%>
-    <%--</div>--%>
-<%--</div>--%>
-<%--<div class="am-modal am-modal-alert" tabindex="-1" id="failed">--%>
-    <%--<div class="am-modal-dialog">--%>
-        <%--<div class="am-modal-hd"><span>操作失败！</span></div>--%>
-        <%--<div class="am-modal-footer">--%>
-            <%--<span class="am-modal-btn">确定</span>--%>
-        <%--</div>--%>
-    <%--</div>--%>
-<%--</div>--%>
+<div class="am-modal am-modal-alert" tabindex="-1" id="success">
+    <div class="am-modal-dialog">
+        <div class="am-modal-hd"><span>操作成功！</span></div>
+        <div class="am-modal-footer">
+            <span class="am-modal-btn">确定</span>
+        </div>
+    </div>
+</div>
+<div class="am-modal am-modal-alert" tabindex="-1" id="failed">
+    <div class="am-modal-dialog">
+        <div class="am-modal-hd"><span>操作失败！</span></div>
+        <div class="am-modal-footer">
+            <span class="am-modal-btn">确定</span>
+        </div>
+    </div>
+</div>
+<div class="am-modal am-modal-alert" tabindex="-1" id="fileTip">
+    <div class="am-modal-dialog">
+        <div class="am-modal-hd"><span>文件大小不能超过2M！</span></div>
+        <div class="am-modal-footer">
+            <span class="am-modal-btn">确定</span>
+        </div>
+    </div>
+</div>
+<div class="am-modal am-modal-alert" tabindex="-1" id="alertTip">
+    <div class="am-modal-dialog">
+        <div class="am-modal-hd"><span></span></div>
+        <div class="am-modal-footer">
+            <span class="am-modal-btn">确定</span>
+        </div>
+    </div>
+</div>
 
 <footer>
     <hr>
     <p class="am-padding-left"></p>
 </footer>
-<script src="${ctx}/public/javascript/common/jquery.min.js"></script>
+<script src="${ctx}/public/assets/js/jquery.min.js"></script>
 <script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
 <script src="${ctx}/public/assets/js/polyfill/rem.min.js"></script>
 <script src="${ctx}/public/assets/js/polyfill/respond.min.js"></script>
@@ -99,23 +115,12 @@
         });
 
         $("#chatroom").on("click",function(){
-            doAjax("/userManage/chatRoomIndex","");
+            doAjax("/chat/chatRoomIndex","");
         });
 
         $("#logout").on("click",function(){
-            $.ajax({
-                url : webDemo.formatUrl("/login/logOut"),
-                type : "GET",
-                data : {},
-                success : function(result){
-
-                },
-                error : function(e){
-
-                }
-            });
+            window.location.href = webDemo.formatUrl("/login/logOut");
         })
-
     })
 
     var path = "${ctx}";

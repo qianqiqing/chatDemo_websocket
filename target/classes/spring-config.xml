@@ -17,7 +17,7 @@
 	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
-		<property name="url" value="jdbc:mysql://localhost:3306/demo" />
+		<property name="url" value="jdbc:mysql://localhost:3306/mydatabase" />
 		<property name="username" value="root" />
 		<property name="password" value="bb520520" />
 	</bean>
@@ -47,25 +47,25 @@
 		 transaction-manager：引用上面定义的事务管理器
 	 -->
 	<tx:annotation-driven transaction-manager="txManager" />
-	 <!-- 加载配置文件 -->  
-    <bean id="propertyConfigurer"  
-          class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">  
-        <property name="locations">  
-            <list>  
-                <value>classpath:log4j.properties</value>  
-            </list>  
-        </property>  
-    </bean>  
-    
-    <!--启用ehcache缓存  -->
-    <cache:annotation-driven cache-manager="cacheManager"/>  
-    
-    <bean id="cacheManagerFactory" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean"> 
-        <property name="configLocation" value="classpath:ehcache.xml"/> 
-   </bean> 
+	 <!-- 加载配置文件 -->
+    <bean id="propertyConfigurer"
+          class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>classpath:log4j.properties</value>
+            </list>
+        </property>
+    </bean>
 
-   <bean id="cacheManager" class="org.springframework.cache.ehcache.EhCacheCacheManager"> 
-        <property name="cacheManager" ref="cacheManagerFactory"/> 
-   </bean> 
+    <!--启用ehcache缓存  -->
+    <cache:annotation-driven cache-manager="cacheManager"/>
+
+    <bean id="cacheManagerFactory" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">
+        <property name="configLocation" value="classpath:ehcache.xml"/>
+   </bean>
+
+   <bean id="cacheManager" class="org.springframework.cache.ehcache.EhCacheCacheManager">
+        <property name="cacheManager" ref="cacheManagerFactory"/>
+   </bean>
 
 </beans>

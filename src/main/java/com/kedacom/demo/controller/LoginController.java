@@ -4,6 +4,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.kedacom.demo.common.utils.Base64OperateUtil;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,24 +19,37 @@ import com.kedacom.demo.service.LoginInfoService;
 import com.kedacom.demo.service.UserManageService;
 
 import java.io.IOException;
-
+/**
+ * 登陆管理
+ * @Author 钱其清
+ */
 @Controller
 @RequestMapping("/login")
 public class LoginController {
-	Logger logger = Logger.getLogger(LoginController.class);
-	
 	@Autowired
 	private LoginInfoService loginInfoService;
 	
 	@Autowired
 	private UserManageService userManageService;
-	
+
+	/**
+	 * 登陆首页
+	 * @return
+	 */
 	@RequestMapping (method = RequestMethod.GET)  
     public ModelAndView login() {
 		ModelAndView view = new ModelAndView("login/login");
         return view;   
     }
-	
+
+	/**
+	 * 登陆验证
+	 * @param session
+	 * @param name
+	 * @param password
+	 * @param model
+	 * @return
+	 */
 	@RequestMapping (value = "/loginValidate")
 	public String loginValidate(HttpSession session , String name, String password, Model model) {
 		User user = loginInfoService.validateUser(name, password);
@@ -49,11 +63,20 @@ public class LoginController {
 		}
 	}
 
+	/**
+	 * 退出登陆
+	 * @param request
+	 * @return
+	 */
 	@RequestMapping (value = "/logOut", method = RequestMethod.GET)
-	public String logOut(HttpServletRequest request, HttpServletResponse response){
+	public String logOut(HttpServletRequest request){
+		//改变用户状态
+		User currentUser = (User) request.getSession().getAttribute("currentUser");
+		currentUser.setStatus(0);
+		userManageService.createOrUpdateUser(currentUser);
+		//移除session
 		request.getSession().removeAttribute("currentUser");
 		request.getSession().invalidate();
-		String url = request.getContextPath();
-		return "redirect:" + url;
+		return "login/login";
 	}
 }

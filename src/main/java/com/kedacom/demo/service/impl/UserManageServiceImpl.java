@@ -1,25 +1,18 @@
 package com.kedacom.demo.service.impl;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.util.ArrayList;
 import java.util.List;
 
-import javax.servlet.http.HttpServletResponse;
-
+import com.kedacom.demo.common.utils.Base64OperateUtil;
+import com.kedacom.demo.common.utils.ConstantDefine;
+import com.kedacom.demo.dao.UserGroupDao;
+import com.kedacom.demo.model.UserGroup;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import com.kedacom.demo.common.wesocket.ChatRoom;
 import com.kedacom.demo.dao.UserDao;
 import com.kedacom.demo.model.User;
 import com.kedacom.demo.service.UserManageService;
-import org.springframework.util.StringUtils;
 
 /**
  * 管理用户的service实现类
@@ -32,19 +25,51 @@ public class UserManageServiceImpl implements UserManageService {
 	@Autowired
 	private UserDao userDao;
 
+	@Autowired
+	private UserGroupDao userGroupDao;
+
 	@Override
-	public int createUser(User user) {
-		int id = userDao.insert(user);
-		return id;
+	public boolean createOrUpdateUser(User user) {
+		User queryUser = userDao.selectByName(user.getName());
+		//验证是否重名
+		boolean validateInfo = validate(user, queryUser);
+		if (!validateInfo) {
+			String password = user.getPassword();
+			//更新操作
+			if (user.getId() != null) {
+				//如果密码没有加密则标识修改了密码
+				if (!Base64OperateUtil.ifBase(password)) {
+					user.setPassword(Base64OperateUtil.jdkBase64Encoder(password));
+				}
+				userDao.updateByPrimaryKey(user);
+			}  else {           //新增操作
+				//base64对密码加密
+				user.setPassword(Base64OperateUtil.jdkBase64Encoder(password));
+				userDao.insert(user);
+			}
+		}
+		return validateInfo;
 	}
 
 	@Override
-	public void modifyUser(User user) {
-		try{
-			userDao.updateByPrimaryKey(user);
-		}catch(Exception e){
-			logger.error("modify user error:" + e);
+	public List<User> selectedUser(Integer groupId) {
+		//所有用户
+		List<User> allUser = userDao.getAllUser();
+		//查询该分组下已经分配的用户
+		List<UserGroup> userGroupList = userGroupDao.selectByGroupId(groupId);
+		List<Integer> selectedIds = new ArrayList<>();
+		for (UserGroup userGroup : userGroupList) {
+			selectedIds.add(userGroup.getUserId());
 		}
+
+		//组合已关联和未关联用户
+		for (User user : allUser) {
+			if (selectedIds.contains(user.getId())) {
+				user.setSelected(true);
+			}
+		}
+
+		return allUser;
 	}
 
 	@Override
@@ -63,27 +88,20 @@ public class UserManageServiceImpl implements UserManageService {
 		userDao.deleteByPrimaryKey(id);
 	}
 
-	@Override
-	public void downLoad(HttpServletResponse response, String fileName) {
-		String path = ChatRoom.loadFilePath + fileName;
-		try {
-			// 以流的形式下载文件。
-			InputStream fis = new BufferedInputStream(new FileInputStream(path));
-			byte[] buffer = new byte[fis.available()];
-			fis.read(buffer);
-			fis.close();
-			// 清空response
-			response.reset();
-			// 设置response的Header
-			response.setContentType("application/octet-stream;charset=utf-8");
-			response.setHeader("Content-Disposition", "attachment;filename=" + new String(fileName.getBytes(),"iso-8859-1"));
-			OutputStream toClient = new BufferedOutputStream(response.getOutputStream());
-			toClient.write(buffer);
-			toClient.flush();
-			toClient.close();
-		} catch (IOException ex) {
-			ex.printStackTrace();
+	/**
+	 * 验证重名用户
+	 * @param user
+	 * @return
+	 */
+	private boolean validate(User user, User queryUser) {
+		if (queryUser != null) {
+			if (queryUser.getId() == user.getId()) {
+				return false;
+			} else {
+                return true;
+			}
 		}
+		return false;
 	}
 
 }

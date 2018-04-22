@@ -1,17 +1,14 @@
 package com.kedacom.demo.controller;
 
-import com.alibaba.fastjson.JSONObject;
 import com.kedacom.demo.common.enums.OperatorEnum;
 import com.kedacom.demo.common.utils.JsonUtil;
 import com.kedacom.demo.model.Group;
 import com.kedacom.demo.model.GroupTree;
 import com.kedacom.demo.model.User;
 import com.kedacom.demo.service.GroupManageService;
-import com.kedacom.demo.service.UserGroupServie;
 import com.kedacom.demo.service.UserManageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -29,21 +26,32 @@ public class GroupManageController {
     @Autowired
     private UserManageService userManageService;
 
-    @Autowired
-    private UserGroupServie userGroupServie;
-
+    /**
+     * 分组管理首页
+     * @return
+     */
     @RequestMapping (value = "/index")
     public ModelAndView groupIndex() {
         ModelAndView view = new ModelAndView("groupManage/index");
         return view;
     }
 
+    /**
+     * 分组树形结构页面
+     * @return
+     */
     @RequestMapping (value = "/initTree")
     public ModelAndView initTree() {
         ModelAndView view = new ModelAndView("groupManage/groupTree");
         return view;
     }
 
+    /**
+     * 分组详情
+     * @param id
+     * @param type
+     * @return
+     */
     @RequestMapping (value = "/groupDetail")
     public ModelAndView groupDetail(@RequestParam Integer id, @RequestParam String type){
         ModelAndView view = new ModelAndView("groupManage/groupContent");
@@ -53,7 +61,7 @@ public class GroupManageController {
             //分组详情
             Group group = groupManageService.getGroupById(id);
             //人员选择列表
-            List<User> selectedUser = userGroupServie.selectedUser(id);
+            List<User> selectedUser = userManageService.selectedUser(id);
 
             view.addObject("userList",selectedUser);
             view.addObject("group",group);
@@ -62,6 +70,11 @@ public class GroupManageController {
         return view;
     }
 
+    /**
+     * 分组中用户信息
+     * @param id
+     * @return
+     */
     @RequestMapping (value = "/userDetail")
     public ModelAndView userDetail(@RequestParam Integer id){
         ModelAndView view = new ModelAndView("groupManage/userDetail");
@@ -70,6 +83,10 @@ public class GroupManageController {
         return view;
     }
 
+    /**
+     * 加载分组树节点数据
+     * @return
+     */
     @RequestMapping (value = "/treeData")
     @ResponseBody
     public String treeData() {
@@ -78,6 +95,11 @@ public class GroupManageController {
         return JsonUtil.toJson(groupTree);
     }
 
+    /**
+     * 创建或编辑分组
+     * @param type
+     * @param group
+     */
     @RequestMapping (value = "/saveOrUpdate/{type}", method = RequestMethod.POST)
     @ResponseBody
     public void saveOrUpdate(@PathVariable("type") String type, Group group) {
@@ -92,6 +114,10 @@ public class GroupManageController {
         }
     }
 
+    /**
+     * 删除分组
+     * @param id
+     */
     @RequestMapping (value = "/deleteGroup", method = RequestMethod.POST)
     @ResponseBody
     public void deleteGroup(@RequestParam Integer id){
@@ -102,6 +128,11 @@ public class GroupManageController {
         }
     }
 
+    /**
+     * 分配用户
+     * @param groupId
+     * @param ids
+     */
     @RequestMapping (value = "/assignUser/{groupId}" ,method = RequestMethod.POST)
     @ResponseBody
     public void assignUser(@PathVariable("groupId") String groupId, @RequestBody List<Integer> ids) {

@@ -1,5 +1,9 @@
 package com.kedacom.demo.common.enums;
 
+/**
+ * 操作类型枚举
+ * @author 钱其清
+ */
 public enum OperatorEnum {
     CREATE("create", 1),
     EDIT("edit", 2),

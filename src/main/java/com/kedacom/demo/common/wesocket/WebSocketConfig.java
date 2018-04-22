@@ -15,20 +15,31 @@ import org.springframework.web.socket.config.annotation.WebSocketHandlerRegistry
 @EnableWebSocket
 public class WebSocketConfig extends WebMvcConfigurerAdapter implements WebSocketConfigurer {
 
+    /**
+     * //注册webSocket的实现类
+     * @param registry
+     */
     @Override
     public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
-        //注册webSocket的实现类
-        registry.addHandler(ChatRoom(), "/chat.sc").addInterceptors(handshakeInterceptor());
+        registry.addHandler(ChatRoom(), "/chat").addInterceptors(handshakeInterceptor());
     }
 
+    /**
+     * 实例化HandshakeInterceptor接口
+     * @return
+     */
     @Bean
     public HandshakeInterceptor handshakeInterceptor() {
         return new HandshakeInterceptor();
     }
 
+    /**
+     * 实例化ChatServer接口
+     * @return
+     */
     @Bean
-    public ChatRoom ChatRoom() {
-        return new ChatRoom();
+    public ChatServer ChatRoom() {
+        return new ChatServer();
     }
 
 }

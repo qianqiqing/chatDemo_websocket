@@ -1,25 +1,38 @@
 package com.kedacom.demo.model;
 
+/**
+ * 用户实体类
+ * @author 钱其清
+ */
 public class User {
-	
+	//用户id
 	private Integer id;
-	
+
+	//用户名
 	private String name;
-	
+
+	//密码
 	private String password;
-	
+
+	//邮箱
 	private String email;
 
+	//电话
 	private String phone;
-	
+
+	//头像服务器地址
 	private String photo;
-	
+
+	//分组
 	private Integer group;
-	
+
+	//用户角色
 	private Integer role;
-	
+
+	//在线状态
 	private Integer status;
 
+	//是否被选中，非数据库字段
 	private boolean selected;
 
 	public Integer getId() {

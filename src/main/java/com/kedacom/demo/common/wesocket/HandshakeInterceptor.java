@@ -17,21 +17,36 @@ import com.kedacom.demo.model.User;
  * @author 钱其清
  */
 public class HandshakeInterceptor extends HttpSessionHandshakeInterceptor {
+
+    /**
+     * 握手前的操作
+     * @param request
+     * @param response
+     * @param handler
+     * @param attributes
+     * @return
+     * @throws Exception
+     */
     @Override
-    public boolean beforeHandshake(ServerHttpRequest request, ServerHttpResponse response, WebSocketHandler handler, Map<String, Object> attributes) throws Exception {
-        if (request instanceof ServletServerHttpRequest) {
-            ServletServerHttpRequest servletRequest = (ServletServerHttpRequest) request;
-            HttpSession session = servletRequest.getServletRequest().getSession(false);
-            if (session != null) {
-                User user = (User) session.getAttribute("currentUser");
-                attributes.put("WEBSOCKET_USERNAME",user.getName());
-            }
-        }
+    public boolean beforeHandshake(ServerHttpRequest request,
+                                   ServerHttpResponse response,
+                                   WebSocketHandler handler,
+                                   Map<String, Object> attributes) throws Exception {
         return super.beforeHandshake(request, response, handler, attributes);
     }
 
+    /**
+     * 握手后的操作
+     * @param request
+     * @param response
+     * @param wsHandler
+     * @param ex
+     */
     @Override
-    public void afterHandshake(ServerHttpRequest request, ServerHttpResponse response, WebSocketHandler wsHandler, Exception ex) {
+    public void afterHandshake(ServerHttpRequest request,
+                               ServerHttpResponse response,
+                               WebSocketHandler wsHandler,
+                               Exception ex) {
         super.afterHandshake(request, response, wsHandler, ex);
     }
 

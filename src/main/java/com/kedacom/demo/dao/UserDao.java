@@ -6,6 +6,10 @@ import com.kedacom.demo.model.User;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
+/**
+ * 用户管理dao层接口
+ * @author 钱其清
+ */
 @Repository
 public interface UserDao {
     /**
@@ -63,6 +67,11 @@ public interface UserDao {
      */
     List<User> getQueryUser(@Param("userName") String name, @Param("userStatus") Integer status);
 
+    /**
+     * 查询不在isd中的用户
+     * @param ids
+     * @return
+     */
     List<User> getNotInUser(List<Integer> ids);
 
     /**

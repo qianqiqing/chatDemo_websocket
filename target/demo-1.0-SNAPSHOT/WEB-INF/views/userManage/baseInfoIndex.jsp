@@ -101,7 +101,7 @@
         };
 
         $.ajax({
-            url : webDemo.formatUrl("/userManage/modifyUser"),
+            url : webDemo.formatUrl("/userManage/createOrUpdateUser"),
             type: "POST",
             data : user,
             success : function(result){

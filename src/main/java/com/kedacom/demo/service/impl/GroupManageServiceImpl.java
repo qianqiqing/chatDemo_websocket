@@ -17,6 +17,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * 分组管理实现类
+ * @author 钱其清
+ */
 @Service
 public class GroupManageServiceImpl implements GroupManageService {
     private final Logger logger = Logger.getLogger(this.getClass());

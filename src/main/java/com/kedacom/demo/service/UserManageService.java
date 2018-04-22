@@ -6,26 +6,17 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.kedacom.demo.model.User;
 
+/**
+ * 用户管理接口
+ * @author 钱其清
+ */
 public interface UserManageService {
 	/**
-	 * 创建用户
+	 * 创建或更新用户
 	 * @param user
 	 * @return
 	 */
-	public int createUser(User user);
-
-	/**
-	 * 更新用户信息
-	 * @param user
-	 */
-	public void modifyUser(User user);
-
-	/**
-	 * 文件下载
-	 * @param response
-	 * @param fileName
-	 */
-	public void downLoad(HttpServletResponse response, String fileName);
+	public boolean createOrUpdateUser(User user);
 
 	/**
 	 * 根据id获取用户
@@ -47,4 +38,11 @@ public interface UserManageService {
 	 * @param id
 	 */
 	public void deleteById(Integer id);
+
+	/**
+	 * 某个分组下可分配的人员列表
+	 * @param groupId
+	 * @return
+	 */
+	List<User> selectedUser(Integer groupId);
 }
