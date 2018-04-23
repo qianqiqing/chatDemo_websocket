@@ -26,30 +26,10 @@ public interface UserGroupDao {
     int insert(UserGroup record);
 
     /**
-     * 根据id查询
-     * @param id
-     * @return
-     */
-    UserGroup selectByPrimaryKey(Integer id);
-
-    /**
      * 根据分组id查找关联关系
      * @param groupId
      * @return
      */
     List<UserGroup> selectByGroupId(Integer groupId);
 
-    /**
-     * 根据用户id查找关联关系
-     * @param userId
-     * @return
-     */
-    List<UserGroup> selectByUserId(Integer userId);
-
-    /**
-     * 更新关联关系
-     * @param record
-     * @return
-     */
-    int updateByPrimaryKey(UserGroup record);
 }

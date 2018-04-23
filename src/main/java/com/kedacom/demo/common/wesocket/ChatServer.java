@@ -1,33 +1,21 @@
 package com.kedacom.demo.common.wesocket;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.nio.ByteBuffer;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.kedacom.demo.common.enums.MessageTypeEnum;
-import com.kedacom.demo.common.utils.ConstantDefine;
 import com.kedacom.demo.common.utils.JsonUtil;
 import com.kedacom.demo.model.ChatContent;
 import org.apache.log4j.Logger;
-import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.socket.BinaryMessage;
 import org.springframework.web.socket.CloseStatus;
 import org.springframework.web.socket.TextMessage;
 import org.springframework.web.socket.WebSocketSession;
 import org.springframework.web.socket.handler.AbstractWebSocketHandler;
 
-import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.kedacom.demo.model.User;
 

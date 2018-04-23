@@ -12,10 +12,7 @@ import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * 分组管理实现类
@@ -77,7 +74,7 @@ public class GroupManageServiceImpl implements GroupManageService {
         //查询该分组的子节点,将他们的父节点信息置空
         List<Group> allGroupList = groupDao.getGroupList();
         for (Group group : allGroupList) {
-            if (group.getParentId().equals(id)) {
+            if (Objects.equals(group.getParentId(),id)) {
                 group.setParentId(null);
                 groupDao.updateByPrimaryKeySelective(group);
             }
@@ -125,7 +122,7 @@ public class GroupManageServiceImpl implements GroupManageService {
         List<GroupTree> childNodeList = new ArrayList<>();
         for (Group group : groupList) {
             GroupTree childNode = new GroupTree();
-            if (group.getParentId().equals(node.getId())) {    //是子节点
+            if (Objects.equals(group.getParentId(),node.getId())) {    //是子节点
                 childNode.setId(group.getId());
                 childNode.setText(group.getGroupName());
                 childNode.setType("group");

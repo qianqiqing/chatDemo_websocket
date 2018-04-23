@@ -46,5 +46,9 @@ public interface UserManageService {
 	 */
 	List<User> selectedUser(Integer groupId);
 
+	/**
+	 * 在线人员列表
+	 * @return
+	 */
 	List<User> onLineUser();
 }

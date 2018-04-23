@@ -2,6 +2,7 @@ package com.kedacom.demo.service.impl;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 import com.kedacom.demo.common.utils.Base64OperateUtil;
 import com.kedacom.demo.common.utils.ConstantDefine;
@@ -100,7 +101,7 @@ public class UserManageServiceImpl implements UserManageService {
 	 */
 	private boolean validate(User user, User queryUser) {
 		if (queryUser != null) {
-			if (queryUser.getId().equals(user.getId())) {
+			if (Objects.equals(queryUser.getId(), user.getId())) {
 				return false;
 			} else {
                 return true;

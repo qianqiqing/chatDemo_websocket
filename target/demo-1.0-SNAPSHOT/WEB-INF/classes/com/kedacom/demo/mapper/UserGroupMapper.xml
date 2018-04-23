@@ -11,25 +11,11 @@
     id, demo_user_id, demo_group_id
   </sql>
 
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
-    select 
-    <include refid="Base_Column_List" />
-    from demo_user_group
-    where id = #{id,jdbcType=INTEGER}
-  </select>
-
   <select id="selectByGroupId" resultMap="BaseResultMap" parameterType="java.lang.Integer">
     select
     <include refid="Base_Column_List" />
     from demo_user_group
     where demo_group_id = #{groupId,jdbcType=INTEGER}
-  </select>
-
-  <select id="selectByUserId" resultMap="BaseResultMap" parameterType="java.lang.Integer">
-    select
-    <include refid="Base_Column_List" />
-    from demo_user_group
-    where demo_user_id = #{userId,jdbcType=INTEGER}
   </select>
 
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
@@ -43,12 +29,5 @@
     values (#{id,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{groupId,jdbcType=INTEGER}
       )
   </insert>
-
-  <update id="updateByPrimaryKey" parameterType="com.kedacom.demo.model.UserGroup" >
-    update demo_user_group
-    set demo_user_id = #{userId,jdbcType=INTEGER},
-      demo_group_id = #{groupId,jdbcType=INTEGER}
-    where id = #{id,jdbcType=INTEGER}
-  </update>
 
 </mapper>

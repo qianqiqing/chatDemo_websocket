@@ -13,7 +13,6 @@
 
     <!-- 搜索spring控件 -->
     <context:component-scan base-package="com.kedacom.demo">
-        <context:include-filter expression="org.springframework.stereotype.Controller" type="annotation"/>
     </context:component-scan>
 
     <bean id="messageAdapter" class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">

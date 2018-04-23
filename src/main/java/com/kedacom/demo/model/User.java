@@ -35,7 +35,7 @@ public class User implements Serializable {
 	private Integer role;
 
 	//在线状态
-	private Integer status;
+	private Integer status = 0;
 
 	//是否被选中，非数据库字段
 	private boolean selected;

@@ -7,57 +7,54 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11766dde-25e2-4106-836e-d317b7529992" name="Default" comment="前端框架重构">
-      <change afterPath="$PROJECT_DIR$/src/test/java/GroupIntefaceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/demo_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/demo_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_3_8_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/demo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/enums/MessageTypeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/enums/MessageTypeEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/enums/OperatorEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/enums/OperatorEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/utils/Base64OperateUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/utils/Base64OperateUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/utils/FileOperateUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/utils/FileOperateUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/wesocket/ChatServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/wesocket/ChatServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/wesocket/WebSocketConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/wesocket/WebSocketConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/controller/ChatRoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/controller/ChatRoomController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/UserManageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/UserManageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/impl/GroupManageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/impl/GroupManageServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/impl/UserManageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/impl/UserManageServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resource/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resource/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resource/spring-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resource/spring-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/singleChat.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/singleChat.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/public/tree_data1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kedacom/demo/common/enums/MessageTypeEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kedacom/demo/common/enums/MessageTypeEnum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kedacom/demo/common/enums/OperatorEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kedacom/demo/common/enums/OperatorEnum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kedacom/demo/common/utils/Base64OperateUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kedacom/demo/common/utils/Base64OperateUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kedacom/demo/common/utils/FileOperateUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kedacom/demo/common/utils/FileOperateUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kedacom/demo/common/wesocket/ChatServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kedacom/demo/common/wesocket/ChatServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kedacom/demo/common/wesocket/WebSocketConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kedacom/demo/common/wesocket/WebSocketConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kedacom/demo/controller/ChatRoomController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kedacom/demo/controller/ChatRoomController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kedacom/demo/service/UserManageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kedacom/demo/service/UserManageService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kedacom/demo/service/impl/GroupManageServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kedacom/demo/service/impl/GroupManageServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kedacom/demo/service/impl/UserManageServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kedacom/demo/service/impl/UserManageServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/spring-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spring-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/common/enums/MessageTypeEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/common/enums/MessageTypeEnum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/common/enums/OperatorEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/common/enums/OperatorEnum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/common/utils/Base64OperateUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/common/utils/Base64OperateUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/common/utils/FileOperateUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/common/utils/FileOperateUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/common/wesocket/ChatServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/common/wesocket/ChatServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/common/wesocket/WebSocketConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/common/wesocket/WebSocketConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/controller/ChatRoomController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/controller/ChatRoomController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/service/UserManageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/service/UserManageService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/service/impl/GroupManageServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/service/impl/GroupManageServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/service/impl/UserManageServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/service/impl/UserManageServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/spring-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/spring-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/views/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/views/singleChat.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/views/singleChat.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/public/tree_data1.json" beforeDir="false" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_http_9_2_17_v20160517.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_io_9_2_17_v20160517.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_security_9_2_17_v20160517.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_server_9_2_17_v20160517.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_servlet_9_2_17_v20160517.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_util_9_2_17_v20160517.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_websocket_websocket_api_9_2_17_v20160517.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_websocket_websocket_client_9_2_17_v20160517.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_websocket_websocket_common_9_2_17_v20160517.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_websocket_websocket_server_9_2_17_v20160517.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_websocket_websocket_servlet_9_2_17_v20160517.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_3_2_4_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/ToolUtilTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/UserInterfaceTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/common/BaseJunit4.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resource/ehcache.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ehcache.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/kedacom/demo/common/wesocket/ChatServer.class" afterPath="$PROJECT_DIR$/target/classes/com/kedacom/demo/common/wesocket/ChatServer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/kedacom/demo/model/User.class" afterPath="$PROJECT_DIR$/target/classes/com/kedacom/demo/model/User.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/kedacom/demo/service/impl/GroupManageServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/kedacom/demo/service/impl/GroupManageServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/common/wesocket/ChatServer.class" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/common/wesocket/ChatServer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/model/User.class" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/model/User.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/service/impl/GroupManageServiceImpl.class" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/com/kedacom/demo/service/impl/GroupManageServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/GroupIntefaceTest.class" afterPath="$PROJECT_DIR$/target/test-classes/GroupIntefaceTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/demo_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/demo_war_exploded.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo.iml" afterPath="$PROJECT_DIR$/demo.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/wesocket/ChatServer.java" afterPath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/wesocket/ChatServer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/controller/LoginController.java" afterPath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/controller/LoginController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/dao/UserDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/dao/UserDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/dao/UserGroupDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/dao/UserGroupDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/mapper/UserGroupMapper.xml" afterPath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/mapper/UserGroupMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/mapper/UserMapper.xml" afterPath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/mapper/UserMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/model/User.java" afterPath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/model/User.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/UserManageService.java" afterPath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/UserManageService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/impl/GroupManageServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/impl/GroupManageServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/impl/UserManageServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/impl/UserManageServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resource/logback.xml" afterPath="$PROJECT_DIR$/src/main/resource/logback.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resource/spring-config.xml" afterPath="$PROJECT_DIR$/src/main/resource/spring-config.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resource/spring-context.xml" afterPath="$PROJECT_DIR$/src/main/resource/spring-context.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/GroupIntefaceTest.java" afterPath="$PROJECT_DIR$/src/test/java/GroupIntefaceTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/logback.xml" afterPath="$PROJECT_DIR$/target/classes/logback.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring-config.xml" afterPath="$PROJECT_DIR$/target/classes/spring-config.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring-context.xml" afterPath="$PROJECT_DIR$/target/classes/spring-context.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/spring-config.xml" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/spring-config.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/spring-context.xml" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT/WEB-INF/classes/spring-context.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -69,11 +66,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UserManageServiceImpl.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="UserManageServiceImpl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/impl/UserManageServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="29" column="47" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="47" />
+            <state relative-caret-position="336">
+              <caret line="103" column="63" lean-forward="false" selection-start-line="103" selection-start-column="63" selection-end-line="103" selection-end-column="63" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <marker date="1524502524726" expanded="true" signature="2553:2643" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserInterfaceTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/UserInterfaceTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="11" column="11" lean-forward="false" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -85,25 +95,30 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/controller/LoginController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="175">
-              <caret line="55" column="10" selection-start-line="55" selection-start-column="10" selection-end-line="55" selection-end-column="10" />
+              <caret line="59" column="62" lean-forward="false" selection-start-line="59" selection-start-column="62" selection-end-line="59" selection-end-column="62" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/model/User.java">
+      <file leaf-file-name="InvocableHandlerMethod.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.2.0.RELEASE/spring-web-4.2.0.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+            <state relative-caret-position="201">
+              <caret line="220" column="0" lean-forward="false" selection-start-line="220" selection-start-column="0" selection-end-line="220" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginInfoService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/LoginInfoService.java">
+      <file leaf-file-name="ToolUtilTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ToolUtilTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+            <state relative-caret-position="135">
+              <caret line="5" column="10" lean-forward="false" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -111,53 +126,53 @@
       <file leaf-file-name="LoginInfoServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/impl/LoginInfoServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+            <state relative-caret-position="311">
+              <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="baseInfoIndex.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userManage/baseInfoIndex.jsp">
+      <file leaf-file-name="GroupDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/dao/GroupDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="11" column="71" selection-start-line="11" selection-start-column="71" selection-end-line="11" selection-end-column="71" />
+            <state relative-caret-position="243">
+              <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp">
+      <file leaf-file-name="GroupIntefaceTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/GroupIntefaceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="134" column="20" selection-start-line="134" selection-start-column="20" selection-end-line="134" selection-end-column="20" />
+            <state relative-caret-position="-729">
+              <caret line="12" column="11" lean-forward="false" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserManageService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/UserManageService.java">
+      <file leaf-file-name="OperatorEnum.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/enums/OperatorEnum.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+            <state relative-caret-position="891">
+              <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+              <folding>
+                <element signature="e#737#738#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="log4j.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resource/log4j.properties">
+      <file leaf-file-name="MessageTypeEnum.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/enums/MessageTypeEnum.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FileOperateUtil.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/utils/FileOperateUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="805">
-              <caret line="41" column="37" selection-start-line="41" selection-start-column="37" selection-end-line="41" selection-end-column="37" />
+            <state relative-caret-position="459">
+              <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -177,6 +192,12 @@
       <find>未选择任何文件</find>
       <find>list</find>
       <find>current</find>
+      <find>DelegatingWebSocketConfiguration</find>
+      <find>WebSocketHandlerMapping</find>
+      <find>getNotInUser</find>
+      <find>selectByPrimaryKey</find>
+      <find>selectByUserId</find>
+      <find>updateByPrimaryKey</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -185,21 +206,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/kedacom/demo/mapper/UserMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/groupManage/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/groupManage/userDetail.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/impl/UserGroupServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/groupManage/groupContent.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index_test.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/wesocket/ChatRoom.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/down.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/utils/JsonUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/wesocket/HandshakeInterceptor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kedacom/demo/dao/UserDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kedacom/demo/model/ChatContent.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kedacom/demo/model/GroupTree.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kedacom/demo/model/UserGroup.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kedacom/demo/model/Group.java" />
@@ -207,38 +221,50 @@
         <option value="$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/LoginInfoService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/UserGroupServie.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/groupManage/groupTree.jsp" />
-        <option value="$PROJECT_DIR$/src/main/resource/spring-context.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/kedacom/demo/controller/FileLoadController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/utils/ValidateUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/utils/ConstantDefine.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userManage/editUserIndex.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userManage/baseInfoIndex.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userManage/createUserIndex.jsp" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userManage/userContent.jsp" />
-        <option value="$PROJECT_DIR$/src/main/resource/logback.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/kedacom/demo/controller/UserManageController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kedacom/demo/controller/GroupManageController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/impl/LoginInfoServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/resource/spring-config.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/public/javascript/websocketInit.js" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/UserManageService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kedacom/demo/controller/ChatRoomController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/singleChat.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/wesocket/ChatServer.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/utils/Base64OperateUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/impl/GroupManageServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/test/java/GroupIntefaceTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/impl/UserManageServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/enums/MessageTypeEnum.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/enums/OperatorEnum.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/wesocket/WebSocketConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/utils/FileOperateUtil.java" />
         <option value="$PROJECT_DIR$/src/main/resource/log4j.properties" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kedacom/demo/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/wesocket/ChatServer.java" />
+        <option value="$PROJECT_DIR$/src/main/resource/spring-context.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/impl/GroupManageServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ChatTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kedacom/demo/model/User.java" />
+        <option value="$PROJECT_DIR$/src/test/resource/user.json" />
+        <option value="$PROJECT_DIR$/src/test/resource/group.json" />
+        <option value="$PROJECT_DIR$/src/test/java/common/FileRead.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/UserManageService.java" />
+        <option value="$PROJECT_DIR$/src/main/resource/spring-config.xml" />
+        <option value="$PROJECT_DIR$/src/main/resource/logback.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kedacom/demo/dao/UserDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kedacom/demo/mapper/UserMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kedacom/demo/dao/UserGroupDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kedacom/demo/mapper/UserGroupMapper.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/GroupIntefaceTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/UserInterfaceTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ToolUtilTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/common/BaseJunit4.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kedacom/demo/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/impl/UserManageServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -258,8 +284,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="E:/apache-maven-2.2.1/apache-maven-2.2.1" />
-        <option name="userSettingsFile" value="E:\apache-maven-2.2.1\apache-maven-2.2.1\conf\settings.xml" />
+        <option name="userSettingsFile" value="D:\maven\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
     <option name="importingSettings">
@@ -298,7 +323,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="10" />
     <option name="y" value="20" />
     <option name="width" value="1346" />
@@ -306,12 +331,22 @@
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -343,6 +378,25 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chatDemo_websocket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chatDemo_websocket" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="kedacom" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chatDemo_websocket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chatDemo_websocket" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="kedacom" type="462c0819:PsiDirectoryNode" />
               <item name="demo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -351,6 +405,8 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="kedacom" type="462c0819:PsiDirectoryNode" />
               <item name="demo" type="462c0819:PsiDirectoryNode" />
               <item name="common" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -360,9 +416,102 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="kedacom" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="enums" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chatDemo_websocket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chatDemo_websocket" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="kedacom" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chatDemo_websocket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chatDemo_websocket" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="kedacom" type="462c0819:PsiDirectoryNode" />
               <item name="demo" type="462c0819:PsiDirectoryNode" />
               <item name="common" type="462c0819:PsiDirectoryNode" />
               <item name="wesocket" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chatDemo_websocket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chatDemo_websocket" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="kedacom" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chatDemo_websocket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chatDemo_websocket" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="kedacom" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chatDemo_websocket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chatDemo_websocket" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="kedacom" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chatDemo_websocket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chatDemo_websocket" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="kedacom" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chatDemo_websocket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chatDemo_websocket" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="kedacom" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chatDemo_websocket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chatDemo_websocket" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="kedacom" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="chatDemo_websocket" type="b2602c69:ProjectViewProjectNode" />
@@ -375,40 +524,6 @@
               <item name="chatDemo_websocket" type="b2602c69:ProjectViewProjectNode" />
               <item name="chatDemo_websocket" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="chatDemo_websocket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chatDemo_websocket" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="chatDemo_websocket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chatDemo_websocket" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="chatDemo_websocket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chatDemo_websocket" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="userManage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="chatDemo_websocket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chatDemo_websocket" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -418,10 +533,19 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="chatDemo_websocket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chatDemo_websocket" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -431,7 +555,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -445,14 +569,137 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Tomcat Server.local">
+    <configuration name="GroupIntefaceTest.testAssignUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="demo" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GroupIntefaceTest" />
+      <option name="METHOD_NAME" value="testAssignUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="GroupIntefaceTest.testDelete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="demo" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GroupIntefaceTest" />
+      <option name="METHOD_NAME" value="testDelete" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="GroupIntefaceTest.testGetTreeData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="demo" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GroupIntefaceTest" />
+      <option name="METHOD_NAME" value="testGetTreeData" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="GroupIntefaceTest.testUpdate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="demo" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GroupIntefaceTest" />
+      <option name="METHOD_NAME" value="testUpdate" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="ToolUtilTest.downLoad" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="demo" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ToolUtilTest" />
+      <option name="METHOD_NAME" value="downLoad" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="远程">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="WIDTH" value="0" />
+      <option name="HEIGHT" value="0" />
+      <module />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" />
@@ -462,13 +709,23 @@
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="singleModule" />
       </option>
+      <envs />
       <patterns />
     </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SUITE_NAME" />
@@ -481,16 +738,19 @@
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="singleModule" />
       </option>
       <option name="USE_DEFAULT_REPORTERS" value="false" />
       <option name="PROPERTIES_FILE" />
+      <envs />
       <properties />
       <listeners />
     </configuration>
-    <configuration name="local" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.47" ALTERNATIVE_JRE_ENABLED="false">
+    <configuration name="local" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.72" ALTERNATIVE_JRE_ENABLED="false">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/demo" />
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <option name="UPDATING_POLICY" value="restart-server" />
@@ -509,6 +769,7 @@
       <predefined_log_file id="Tomcat Manager" enabled="false" />
       <predefined_log_file id="Tomcat Host Manager" enabled="false" />
       <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="65524" />
       </RunnerSettings>
@@ -563,19 +824,26 @@
         </option>
       </method>
     </configuration>
-    <configuration default="true" type="Remote" factoryName="远程">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-    </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
-      <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file id="idea.log" enabled="true" />
-    </configuration>
+    <list size="6">
+      <item index="0" class="java.lang.String" itemvalue="Tomcat Server.local" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.GroupIntefaceTest.testAssignUser" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.GroupIntefaceTest.testGetTreeData" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.GroupIntefaceTest.testUpdate" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.GroupIntefaceTest.testDelete" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.ToolUtilTest.downLoad" />
+    </list>
+    <recent_temporary>
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.ToolUtilTest.downLoad" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.GroupIntefaceTest.testDelete" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.GroupIntefaceTest.testUpdate" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.GroupIntefaceTest.testGetTreeData" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.GroupIntefaceTest.testAssignUser" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -602,50 +870,80 @@
       <workItem from="1524469465645" duration="292000" />
       <workItem from="1524469805658" duration="2628000" />
       <workItem from="1524472978492" duration="3325000" />
+      <workItem from="1524489598848" duration="10692000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="GroupIntefaceTest_testAssignUser - 2018.04.24 at 00h 25m 08s.xml">
+      <configuration name="GroupIntefaceTest.testAssignUser" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GroupIntefaceTest_testCreate - 2018.04.24 at 00h 24m 38s.xml">
+      <configuration name="GroupIntefaceTest.testCreate" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GroupIntefaceTest_testCreate - 2018.04.24 at 00h 24m 59s.xml">
+      <configuration name="GroupIntefaceTest.testCreate" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GroupIntefaceTest_testDelete - 2018.04.24 at 00h 26m 08s.xml">
+      <configuration name="GroupIntefaceTest.testDelete" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GroupIntefaceTest_testGetTreeData - 2018.04.24 at 00h 25m 17s.xml">
+      <configuration name="GroupIntefaceTest.testGetTreeData" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GroupIntefaceTest_testUpdate - 2018.04.24 at 00h 25m 50s.xml">
+      <configuration name="GroupIntefaceTest.testUpdate" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ToolUtilTest_downLoad - 2018.04.24 at 00h 45m 02s.xml">
+      <configuration name="ToolUtilTest.downLoad" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserInterfaceTest - 2018.04.24 at 00h 23m 14s.xml">
+      <configuration name="UserInterfaceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserInterfaceTest_testGetUserList - 2018.04.24 at 00h 20m 40s.xml">
+      <configuration name="UserInterfaceTest.testGetUserList" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserInterfaceTest_testSelectedUser - 2018.04.24 at 00h 16m 50s.xml">
+      <configuration name="UserInterfaceTest.testSelectedUser" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="196568000" />
+    <option name="totallyTimeSpent" value="207260000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info active="true" anchor="bottom" id="FindBugs-IDEA" order="7" visible="true" weight="0.398568" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32962137" />
-      <window_info anchor="right" id="Maven Projects" order="3" weight="0.32995737" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info id="Designer" order="2" />
-      <window_info anchor="right" id="Database" order="3" weight="0.32995737" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.14916468" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.20763724" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info id="Image Layers" order="2" />
-      <window_info anchor="bottom" id="Java Enterprise" order="7" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.23608018" />
-      <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2605178" />
-      <window_info id="Web" order="2" side_tool="true" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info id="设计师" order="2" />
-      <window_info anchor="right" id="调色板" order="3" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.43095767" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="调色板" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="设计师" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29398665" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28619152" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27878466" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -674,12 +972,6 @@
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/utils/FileOperateUtil.java</url>
-          <line>68</line>
-          <properties />
-          <option name="timeStamp" value="34" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/controller/GroupManageController.java</url>
           <line>114</line>
           <properties />
@@ -693,7 +985,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/impl/UserManageServiceImpl.java</url>
-          <line>23</line>
+          <line>24</line>
           <properties />
           <option name="timeStamp" value="45" />
         </line-breakpoint>
@@ -705,278 +997,445 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/wesocket/ChatServer.java</url>
-          <line>93</line>
+          <line>80</line>
           <properties />
           <option name="timeStamp" value="48" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/wesocket/ChatServer.java</url>
-          <line>73</line>
+          <line>60</line>
           <properties />
           <option name="timeStamp" value="50" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/controller/LoginController.java</url>
-          <line>74</line>
+          <line>76</line>
           <properties />
           <option name="timeStamp" value="54" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/wesocket/ChatServer.java</url>
-          <line>51</line>
+          <line>36</line>
           <properties />
           <option name="timeStamp" value="55" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/controller/LoginController.java</url>
-          <line>55</line>
+          <line>56</line>
           <properties />
           <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/GroupIntefaceTest.java</url>
+          <line>43</line>
+          <properties />
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/GroupIntefaceTest.java</url>
+          <line>27</line>
+          <properties />
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/GroupIntefaceTest.java</url>
+          <line>53</line>
+          <properties />
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/UserInterfaceTest.java</url>
+          <line>25</line>
+          <properties />
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/utils/FileOperateUtil.java</url>
+          <line>68</line>
+          <properties />
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/impl/LoginInfoServiceImpl.java</url>
+          <line>25</line>
+          <properties />
+          <option name="timeStamp" value="64" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="57" />
+      <option name="time" value="65" />
     </breakpoint-manager>
+    <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.2.0.RELEASE/spring-webmvc-4.2.0.RELEASE-sources.jar!/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-158">
-          <caret line="184" column="61" selection-start-line="184" selection-start-column="35" selection-end-line="184" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/utils/ValidateUtil.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/utils/ConstantDefine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="13" column="69" lean-forward="true" selection-start-line="13" selection-start-column="69" selection-end-line="13" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/public/javascript/common/amazeui.dialog.js" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/groupManage/groupTree.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="104" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/public/javascript/common/jquery.easyui.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="4094" selection-start-line="4094" selection-end-line="4094" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userManage/editUserIndex.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="79" column="71" selection-start-line="79" selection-start-column="71" selection-end-line="79" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userManage/createUserIndex.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="133" column="58" selection-start-line="133" selection-start-column="58" selection-end-line="133" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/demo/bin/start.bat" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6993">
-          <caret line="259" selection-start-line="259" selection-end-line="259" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resource/spring-context.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1917">
-          <caret line="71" selection-start-line="71" selection-end-line="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="76" column="21" selection-start-line="76" selection-start-column="21" selection-end-line="76" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resource/logback.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="44" column="16" lean-forward="true" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/model/Group.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/model/UserGroup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/controller/FileLoadController.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/impl/UserGroupServiceImpl.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/UserGroupServie.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/controller/GroupManageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1426">
-          <caret line="77" selection-start-line="77" selection-end-line="77" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/dao/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1449">
-          <caret line="76" column="7" selection-start-line="76" selection-start-column="7" selection-end-line="76" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/dao/GroupDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="966">
-          <caret line="45" column="35" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/dao/UserGroupDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="828">
-          <caret line="39" column="35" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-837">
-          <caret line="164" column="51" selection-start-line="8" selection-end-line="164" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resource/spring-config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="19" column="68" selection-start-line="19" selection-start-column="68" selection-end-line="19" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/controller/UserManageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="118" selection-start-line="118" selection-end-line="118" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/public/javascript/websocketInit.js" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/controller/ChatRoomController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="506">
-          <caret line="29" column="34" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="34" />
+          <caret line="29" column="34" lean-forward="false" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userManage/userContent.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
-          <caret line="5" column="58" selection-start-line="5" selection-start-column="58" selection-end-line="5" selection-end-column="58" />
+          <caret line="5" column="58" lean-forward="false" selection-start-line="5" selection-start-column="58" selection-end-line="5" selection-end-column="58" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/singleChat.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1426">
-          <caret line="62" column="5" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
+          <caret line="62" column="5" lean-forward="false" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_172/jre/lib/rt.jar!/sun/misc/CharacterEncoder.class" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_172/jre/lib/rt.jar!/sun/misc/CharacterDecoder.class" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_172/src.zip!/java/lang/String.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/utils/Base64OperateUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="805">
+          <caret line="39" column="33" lean-forward="false" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_172/src.zip!/java/io/File.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userManage/baseInfoIndex.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="71" lean-forward="false" selection-start-line="11" selection-start-column="71" selection-end-line="11" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3618">
+          <caret line="134" column="20" lean-forward="false" selection-start-line="134" selection-start-column="20" selection-end-line="134" selection-end-column="20" />
+          <folding>
+            <marker date="1524489557740" expanded="true" signature="4561:4644" ph="{...}" />
+            <marker date="1524489557740" expanded="true" signature="4596:4638" ph="{...}" />
+            <marker date="1524489557740" expanded="true" signature="4671:5079" ph="{...}" />
+            <marker date="1524489557740" expanded="true" signature="4743:5071" ph="{&quot;type&quot;: &quot;GET&quot;...}" />
+            <marker date="1524489557740" expanded="true" signature="4856:4895" ph="{&quot;id&quot;: id...}" />
+            <marker date="1524489557740" expanded="true" signature="4935:5012" ph="{...}" />
+            <marker date="1524489557740" expanded="true" signature="5045:5061" ph="{...}" />
+            <marker date="1524489557740" expanded="true" signature="5111:5403" ph="{...}" />
+            <marker date="1524489557740" expanded="true" signature="5128:5395" ph="{&quot;type&quot;: &quot;GET&quot;...}" />
+            <marker date="1524489557740" expanded="true" signature="5259:5336" ph="{...}" />
+            <marker date="1524489557740" expanded="true" signature="5369:5385" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/utils/ConstantDefine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/AuthFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="42" column="46" lean-forward="false" selection-start-line="42" selection-start-column="46" selection-end-line="42" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/wesocket/ChatServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="53" selection-start-line="53" selection-end-line="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/GroupManageService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="22" column="54" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_172/jre/lib/rt.jar!/sun/misc/CharacterEncoder.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_172/jre/lib/rt.jar!/sun/misc/CharacterDecoder.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="27" column="18" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_172/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="914" column="18" selection-start-line="914" selection-start-column="18" selection-end-line="914" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/utils/Base64OperateUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="805">
-          <caret line="39" column="33" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/impl/GroupManageServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2438">
-          <caret line="127" column="55" selection-start-line="127" selection-start-column="55" selection-end-line="127" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/GroupIntefaceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="-108">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/wesocket/HandshakeInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-websocket/4.0.5.RELEASE/spring-websocket-4.0.5.RELEASE-sources.jar!/org/springframework/web/socket/config/annotation/WebSocketConfigurationSupport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="29" column="24" lean-forward="false" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/wesocket/WebSocketConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
-          <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
+        <state relative-caret-position="783">
+          <caret line="36" column="22" lean-forward="false" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resource/spring-context.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="250" column="17" lean-forward="true" selection-start-line="250" selection-start-column="17" selection-end-line="250" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/utils/JsonUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-50">
+          <caret line="19" column="29" lean-forward="false" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resource/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/model/GroupTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="21" column="19" lean-forward="false" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
+          <folding>
+            <element signature="e#303#304#0" expanded="false" />
+            <element signature="e#328#329#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/impl/GroupManageServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2">
+          <caret line="76" column="54" lean-forward="false" selection-start-line="76" selection-start-column="54" selection-end-line="76" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/GroupManageService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="41" column="16" lean-forward="false" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ChatTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="14" lean-forward="false" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="37" column="30" lean-forward="false" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resource/user.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="23" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/model/Group.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="20" column="27" lean-forward="false" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="27" />
+          <folding>
+            <element signature="e#531#532#0" expanded="true" />
+            <element signature="e#573#574#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resource/group.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="13" column="20" lean-forward="false" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/common/FileRead.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="17" column="1" lean-forward="false" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resource/logback.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="696">
+          <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resource/spring-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/UserManageService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="33" column="33" lean-forward="false" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/LoginInfoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="15" column="16" lean-forward="false" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/utils/FileOperateUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+          <folding>
+            <marker date="1524489557733" expanded="true" signature="3151:3438" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/dao/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/mapper/UserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding>
+            <marker date="1524502198680" expanded="true" signature="1073:1096" ph="select * fro... demo_user" />
+            <marker date="1524502198680" expanded="true" signature="1214:1264" ph="select * fro... demo_user" />
+            <marker date="1524502198680" expanded="true" signature="1390:1459" ph="select * fro... demo_user" />
+            <marker date="1524502198680" expanded="true" signature="1620:1759" ph="select u.* f... demo_user" />
+            <marker date="1524502198680" expanded="true" signature="1869:1929" ph="select * fro... demo_user" />
+            <marker date="1524502198680" expanded="true" signature="2351:2412" ph="delete from " />
+            <marker date="1524502198680" expanded="true" signature="3213:3698" ph="update demo_... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/dao/UserGroupDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/mapper/UserGroupMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="30" column="11" lean-forward="false" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
+          <folding>
+            <marker date="1524502198470" expanded="true" signature="674:800" ph="select from demo_user_group" />
+            <marker date="1524502198470" expanded="true" signature="888:953" ph="delete from " />
+            <marker date="1524502198470" expanded="true" signature="1044:1212" ph="insert into demo_user_group... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/dao/GroupDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/UserInterfaceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="11" lean-forward="false" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ToolUtilTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="10" lean-forward="false" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/common/BaseJunit4.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="7" column="9" lean-forward="false" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/GroupIntefaceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-729">
+          <caret line="12" column="11" lean-forward="false" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/enums/OperatorEnum.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="759">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        <state relative-caret-position="891">
+          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding>
-            <element signature="e#653#654#0" expanded="true" />
-            <element signature="e#680#681#0" expanded="true" />
             <element signature="e#737#738#0" expanded="true" />
           </folding>
         </state>
@@ -984,92 +1443,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/enums/MessageTypeEnum.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="e#345#346#0" expanded="true" />
-            <element signature="e#372#373#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="459">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_172/src.zip!/java/io/File.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.2.0.RELEASE/spring-web-4.2.0.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29831">
-          <caret line="1338" column="19" selection-start-line="1338" selection-start-column="19" selection-end-line="1338" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/common/utils/FileOperateUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="805">
-          <caret line="41" column="37" selection-start-line="41" selection-start-column="37" selection-end-line="41" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resource/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/impl/UserManageServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="29" column="47" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/UserManageService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userManage/baseInfoIndex.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="71" selection-start-line="11" selection-start-column="71" selection-end-line="11" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/LoginInfoService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+        <state relative-caret-position="201">
+          <caret line="220" column="0" lean-forward="false" selection-start-line="220" selection-start-column="0" selection-end-line="220" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/impl/LoginInfoServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="134" column="20" selection-start-line="134" selection-start-column="20" selection-end-line="134" selection-end-column="20" />
+        <state relative-caret-position="311">
+          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/controller/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
-          <caret line="55" column="10" selection-start-line="55" selection-start-column="10" selection-end-line="55" selection-end-column="10" />
+          <caret line="59" column="62" lean-forward="false" selection-start-line="59" selection-start-column="62" selection-end-line="59" selection-end-column="62" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/model/User.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kedacom/demo/service/impl/UserManageServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+        <state relative-caret-position="336">
+          <caret line="103" column="63" lean-forward="false" selection-start-line="103" selection-start-column="63" selection-end-line="103" selection-end-column="63" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1524502524726" expanded="true" signature="2553:2643" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -57,7 +57,7 @@ public class LoginController {
 		if (user != null) {
 			session.setAttribute("currentUser", user);
 			return "index";
-		} else if (StringUtils.isEmpty(session.getAttribute("currentUser"))) {
+		} else if (session.getAttribute("currentUser") != null) {
 			return "index";
 		} else {
 			return "login/login";
