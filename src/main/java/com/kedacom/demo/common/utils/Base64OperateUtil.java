@@ -4,6 +4,7 @@ import sun.misc.BASE64Decoder;
 import sun.misc.BASE64Encoder;
 
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 
 /**
  * base64工具类
@@ -16,8 +17,14 @@ public class Base64OperateUtil {
      * */
     public static String jdkBase64Encoder(String str) {
         BASE64Encoder encoder = new BASE64Encoder();
-        String encode = encoder.encode(str.getBytes());
-        return encode;
+        byte[] strByte = new byte[0];
+        try {
+            strByte = str.getBytes("UTF-8");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        String encodeStr = encoder.encode(strByte);
+        return encodeStr;
     }
 
     /**
@@ -28,7 +35,8 @@ public class Base64OperateUtil {
         BASE64Decoder decoder = new BASE64Decoder();
         String decode=null;
         try {
-            decode = new String( decoder.decodeBuffer(str));
+            byte[] strByte = decoder.decodeBuffer(str);
+            decode = new String(strByte, "UTF-8");
         } catch (IOException e) {
             e.printStackTrace();
         }

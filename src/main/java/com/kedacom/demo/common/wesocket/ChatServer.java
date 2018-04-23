@@ -43,9 +43,6 @@ public class ChatServer extends AbstractWebSocketHandler {
     private static List<String> list = new ArrayList();                        //在线列表
     private static Map<String,WebSocketSession> routetab = new HashMap();      //用户名和session的对应map
 
-    private SimpleDateFormat format=new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
-    private FileOutputStream outPut;
-
     /**
      * 连接建立成功调用的方法,重写父类AbstractWebSocketHandler中的方法
      * @param webSocketSession
@@ -62,6 +59,8 @@ public class ChatServer extends AbstractWebSocketHandler {
             broadcast(message);                                                      //广播通知
         } else {
             list.add(currentUser.getName());
+            message = getMessage("", "text", list);
+            sendText(message, webSocketSession);
         }
     }
 
@@ -109,21 +108,6 @@ public class ChatServer extends AbstractWebSocketHandler {
             }
         } catch (Exception e) {
             logger.error("handleTextMessage exception:"+e);
-        }
-    }
-
-    /**
-     * 处理客户端发送的BinaryMessage,重写父类AbstractWebSocketHandler中的方法
-     * @param session
-     * @param message
-     */
-    @Override
-    public void handleBinaryMessage(WebSocketSession session, BinaryMessage message) {
-        ByteBuffer buffer = message.getPayload();
-        try {
-            outPut.write(buffer.array());
-        } catch (IOException e) {
-            e.printStackTrace();
         }
     }
 
@@ -193,30 +177,5 @@ public class ChatServer extends AbstractWebSocketHandler {
         TextMessage textMessage = new TextMessage(member.toString());
         return textMessage;
     }
-
-//    /**
-//     * 发送文件的二级制信息；
-//     * @param fileName
-//     * @param session
-//     */
-//    private TextMessage buildImageMessage(String fileName,String message, WebSocketSession session) {
-//        FileInputStream input;
-//        TextMessage textMessage = null;
-//        JSONObject member = new JSONObject();
-//        member.put("message",message);
-//        try {
-//            File file = new File(fileName);
-//            input = new FileInputStream(file);
-//            byte bytes[] = new byte[(int) file.length()];
-//            input.read(bytes);
-//            BinaryMessage byteMessage = new BinaryMessage(bytes);
-//            member.put("blob",byteMessage);
-//            textMessage = new TextMessage(member.toString());
-//            input.close();
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//        return textMessage;
-//    }
 
 }

@@ -77,7 +77,7 @@ public class GroupManageServiceImpl implements GroupManageService {
         //查询该分组的子节点,将他们的父节点信息置空
         List<Group> allGroupList = groupDao.getGroupList();
         for (Group group : allGroupList) {
-            if (group.getParentId() == id) {
+            if (group.getParentId().equals(id)) {
                 group.setParentId(null);
                 groupDao.updateByPrimaryKeySelective(group);
             }
@@ -125,7 +125,7 @@ public class GroupManageServiceImpl implements GroupManageService {
         List<GroupTree> childNodeList = new ArrayList<>();
         for (Group group : groupList) {
             GroupTree childNode = new GroupTree();
-            if (group.getParentId() == node.getId()) {    //是子节点
+            if (group.getParentId().equals(node.getId())) {    //是子节点
                 childNode.setId(group.getId());
                 childNode.setText(group.getGroupName());
                 childNode.setType("group");

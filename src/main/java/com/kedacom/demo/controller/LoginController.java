@@ -9,6 +9,7 @@ import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -56,7 +57,7 @@ public class LoginController {
 		if (user != null) {
 			session.setAttribute("currentUser", user);
 			return "index";
-		} else if (session.getAttribute("currentUser") != null) {
+		} else if (StringUtils.isEmpty(session.getAttribute("currentUser"))) {
 			return "index";
 		} else {
 			return "login/login";
@@ -71,11 +72,13 @@ public class LoginController {
 	@RequestMapping (value = "/logOut", method = RequestMethod.GET)
 	public String logOut(HttpServletRequest request){
 		//改变用户状态
-		User currentUser = (User) request.getSession().getAttribute("currentUser");
+		Integer userId = (Integer) request.getSession().getAttribute("userId");
+		User currentUser = userManageService.getUserById(userId);
 		currentUser.setStatus(0);
 		userManageService.createOrUpdateUser(currentUser);
 		//移除session
-		request.getSession().removeAttribute("currentUser");
+		request.getSession().removeAttribute("userId");
+		request.getSession().removeAttribute("userName");
 		request.getSession().invalidate();
 		return "login/login";
 	}

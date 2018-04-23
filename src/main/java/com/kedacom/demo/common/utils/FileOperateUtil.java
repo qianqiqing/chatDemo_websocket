@@ -38,7 +38,8 @@ public class FileOperateUtil {
                         + currentUser.getId()
                         + File.separator;
                 if (!(new File(uploadPath).exists())) {
-                    new File(uploadPath).mkdirs();
+                    File uploadPathFile = new File(uploadPath);
+                    boolean sucess = uploadPathFile.mkdirs();
                 }
                 // 自定义的文件名称 ：上传时间+文件名（防止上传文件名相同文件不同的文件覆盖问题）
                 String trueFileName = String.valueOf(System.currentTimeMillis()) + "_" + fileName;
@@ -75,8 +76,9 @@ public class FileOperateUtil {
             // 清空response
             response.reset();
             // 设置response的Header
+            byte[] fileNameBytes = fileName.getBytes("UTF-8");
             response.setContentType("application/octet-stream;charset=utf-8");
-            response.setHeader("Content-Disposition", "attachment;filename=" + new String(fileName.getBytes(),"iso-8859-1"));
+            response.setHeader("Content-Disposition", "attachment;filename=" + new String(fileNameBytes,"iso-8859-1"));
             OutputStream toClient = new BufferedOutputStream(response.getOutputStream());
             toClient.write(buffer);
             toClient.flush();

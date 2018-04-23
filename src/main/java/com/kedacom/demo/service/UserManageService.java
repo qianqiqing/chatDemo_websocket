@@ -45,4 +45,6 @@ public interface UserManageService {
 	 * @return
 	 */
 	List<User> selectedUser(Integer groupId);
+
+	List<User> onLineUser();
 }

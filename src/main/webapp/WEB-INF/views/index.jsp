@@ -122,9 +122,9 @@
             window.location.href = webDemo.formatUrl("/login/logOut");
         })
     })
-
     var path = "${ctx}";
     webDemo = {
+        webSocket : null,
         formatUrl: function (url) {
             return path + url;
         }

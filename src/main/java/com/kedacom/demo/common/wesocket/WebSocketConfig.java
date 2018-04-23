@@ -21,7 +21,7 @@ public class WebSocketConfig extends WebMvcConfigurerAdapter implements WebSocke
      */
     @Override
     public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
-        registry.addHandler(ChatRoom(), "/chat").addInterceptors(handshakeInterceptor());
+        registry.addHandler(chatServer(), "/chat").addInterceptors(handshakeInterceptor());
     }
 
     /**
@@ -38,7 +38,7 @@ public class WebSocketConfig extends WebMvcConfigurerAdapter implements WebSocke
      * @return
      */
     @Bean
-    public ChatServer ChatRoom() {
+    public ChatServer chatServer() {
         return new ChatServer();
     }
 

@@ -20,8 +20,6 @@ import com.kedacom.demo.service.UserManageService;
  */
 @Service
 public class UserManageServiceImpl implements UserManageService {
-	private Logger logger = Logger.getLogger(this.getClass());
-
 	@Autowired
 	private UserDao userDao;
 
@@ -72,7 +70,12 @@ public class UserManageServiceImpl implements UserManageService {
 		return allUser;
 	}
 
-	@Override
+    @Override
+    public List<User> onLineUser() {
+        return userDao.getOnlineUser();
+    }
+
+    @Override
 	public User getUserById(int id) {
 		return userDao.selectByPrimaryKey(id);
 	}
@@ -88,6 +91,8 @@ public class UserManageServiceImpl implements UserManageService {
 		userDao.deleteByPrimaryKey(id);
 	}
 
+
+
 	/**
 	 * 验证重名用户
 	 * @param user
@@ -95,7 +100,7 @@ public class UserManageServiceImpl implements UserManageService {
 	 */
 	private boolean validate(User user, User queryUser) {
 		if (queryUser != null) {
-			if (queryUser.getId() == user.getId()) {
+			if (queryUser.getId().equals(user.getId())) {
 				return false;
 			} else {
                 return true;

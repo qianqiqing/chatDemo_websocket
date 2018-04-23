@@ -1,8 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="utf-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%String path = request.getContextPath();%>
-<script src="<%=path%>/public/javascript/common/reconnecting-websocket.min.js"></script>
-<%--<jsp:include page="common/commonfile.jsp"/>--%>
+<script src="${path}/demo/public/javascript/common/reconnecting-websocket.min.js"></script><%--<jsp:include page="common/commonfile.jsp"/>--%>
 <!-- content start -->
 <html>
 <div class="am-cf am-padding">
@@ -42,19 +41,29 @@
     <!-- 列表区 -->
     <div class="am-panel am-panel-default" style="float:right;width: 20%;">
         <div class="am-panel-hd">
-            <h3 class="am-panel-title">在线列表 [<span id="onlinenum"></span>]<button style="float: right" onclick="addChat('全体成员')" class="am-btn am-btn-xs am-btn-primary am-round"><span class="am-icon-phone"></span> 发送给所有人</button></h3>
+            <h3 class="am-panel-title">在线列表 [<span id="onlinenum"></span>]<button style="float: right" onclick="addChat('全体成员')" class="am-btn am-btn-xs am-btn-primary am-round"><span class="am-icon-phone"></span> 群聊</button></h3>
         </div>
         <ul class="am-list am-list-static am-list-striped" id="onLineUserlist">
+            <c:forEach var="user" items="${onLineUser}">
+               <li>${user.name}
+                   <button type="button" style="float: right" class="am-btn am-btn-xs am-btn-primary am-round" onclick="addChat(${user.name}) ">
+                       <span class="am-icon-phone">私聊 </span>
+                   </button>
+               </li>
+            </c:forEach>
         </ul>
     </div>
 </div>
 </html>
 <!-- content end -->
 <script>
-    var webSocket = null;
-    <%--webSocket = new WebSocket("ws://" + location.host+"${pageContext.request.contextPath}" + "/chat.sc");--%>
     // 使用 ReconnectingWebSocket连接websocket,可实现断线重连
-    webSocket = new  ReconnectingWebSocket ("ws://" + location.host+"${pageContext.request.contextPath}" + "/chat");
+    if(webDemo.webSocket == null){
+        webDemo.webSocket = new  ReconnectingWebSocket ("ws://" + location.host+"${pageContext.request.contextPath}" + "/chat");
+    }
+    var webSocket = webDemo.webSocket;
+    <%--var webSocket = new  ReconnectingWebSocket ("ws://" + location.host+"${pageContext.request.contextPath}" + "/chat");--%>
+
     //连接成功建立的回调方法
     webSocket.onopen = function (event) {
         setMessageInnerHTML("系统消息：加入连接");
@@ -70,12 +79,12 @@
     webSocket.onerror = function () {
         setMessageInnerHTML("系统消息：error");
     };
-
     /**
      *监听窗口关闭事件，当窗口关闭时，主动去关闭websocket连接，
      *防止连接还没断开就关闭窗口，server端会抛异常。
      */
     window.onbeforeunload = function(event) {
+        debugger
         //判断是否是关闭窗口
         if(event.clientX>document.body.clientWidth&&event.clientY<0||event.altKey)
         {
@@ -83,11 +92,9 @@
             webSocket.close();
         }
     }
-
     function closeWebSocket() {
         webSocket.close();
     }
-
     /**
      * 发送信息给后台
      */
@@ -103,7 +110,6 @@
         };
         webSocket.send(JSON.stringify(obj));
     }
-
     /**
      * 发送文件给后台
      */
@@ -112,7 +118,6 @@
         var to = $("#sendto").text() == "全体成员"? "": $("#sendto").text();
         var img = document.getElementById('file');
         var file = img.files[0];
-
         var fileSize = file.size / 1024;
         if(fileSize>2000){
             $("#fileTip").modal();
@@ -141,7 +146,6 @@
             });
         }
     }
-
     /*
     * 解析后台传来的消息
     */
@@ -157,7 +161,6 @@
         if(message.messageType == "image"){
             showImage(message);
         }
-
         if(message.type == "notice"){       //提示消息
             showNotice(message.message);
         }
@@ -165,7 +168,6 @@
             showOnline(message.list);
         }
     }
-
     /**
      * 展示会话信息
      */
@@ -176,7 +178,6 @@
         var chat = $("#chat-view");
         chat.scrollTop(chat[0].scrollHeight);   //让聊天区始终滚动到最下面
     }
-
     /**
      * 展示提示信息
      */
@@ -185,7 +186,6 @@
         var chat = $("#chat-view");
         chat.scrollTop(chat[0].scrollHeight);   //让聊天区始终滚动到最下面
     }
-
     /*
     * 展示文件信息
     * */
@@ -195,7 +195,6 @@
         var chat = $("#chat-view");
         chat.scrollTop(chat[0].scrollHeight);
     }
-
     /**
      * 展示图片信息
      */
@@ -209,7 +208,6 @@
         var chat = $("#chat-view");
         chat.scrollTop(chat[0].scrollHeight);   //让聊天区始终滚动到最下面
     }
-
     /**
      * 展示在线列表
      */
@@ -230,7 +228,6 @@
         });
         $("#onlinenum").text($("#onLineUserlist li").length);     //获取在线人数
     }
-
     /**
      * 添加接收人
      */
@@ -250,14 +247,12 @@
         sendto.text(receive);
         $('textarea').attr('placeholder',"发送给 "+user+"");
     }
-
     /**
      * 清空聊天区
      */
     function clearConsole(){
         $("#chat").html("");
     }
-
     /**
      * 发送系统消息
      * @param innerHTML
@@ -265,7 +260,6 @@
     function setMessageInnerHTML(innerHTML) {
         $("#chat").append(innerHTML+"<br/>")
     };
-
     /**
      * 下载
      */
@@ -273,7 +267,6 @@
         debugger
         window.location.href = "<%=path%>/fileLoad/downLoad?filePath=" + filePath;
     };
-
     /*
     * 获取当前时间
     * */
@@ -294,8 +287,6 @@
             + seperator2 + date.getSeconds();
         return currentdate;
     }
-
 </script>
 </body>
 </html>
-

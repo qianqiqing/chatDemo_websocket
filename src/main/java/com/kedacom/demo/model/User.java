@@ -1,10 +1,15 @@
 package com.kedacom.demo.model;
 
+import java.io.Serializable;
+
 /**
  * 用户实体类
  * @author 钱其清
  */
-public class User {
+public class User implements Serializable {
+	//序列化ID
+	private static final long serialVersionUID = -5809782578272943999L;
+
 	//用户id
 	private Integer id;
 
