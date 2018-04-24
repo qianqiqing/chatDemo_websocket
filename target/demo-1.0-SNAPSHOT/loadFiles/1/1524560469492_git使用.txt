@@ -1,0 +1,10 @@
+1.上传本地代码： https://blog.csdn.net/qq_32846595/article/details/71149312
+
+2.提示确认你是谁： git  config  user.name  "xxxxx"  git  config  user.email  "xxxxx"  
+
+3.提交更新 ：git status
+               git add .
+               git commit -m ""
+               git pull origin master
+               git push origin master
+4.更新代码 ： git pull

@@ -6,6 +6,7 @@ import java.util.Objects;
 
 import com.kedacom.demo.common.utils.Base64OperateUtil;
 import com.kedacom.demo.common.utils.ConstantDefine;
+import com.kedacom.demo.common.wesocket.ChatServer;
 import com.kedacom.demo.dao.UserGroupDao;
 import com.kedacom.demo.model.UserGroup;
 import org.apache.log4j.Logger;

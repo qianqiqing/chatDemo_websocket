@@ -22,7 +22,6 @@ public class GroupIntefaceTest extends BaseJunit4 {
     @Test
     public void testCreate() {
         Group group = new Group();
-        group = new Group();
         group.setGroupName("test");
         group.setParentId(1);
         groupManageService.create(group);

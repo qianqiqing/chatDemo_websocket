@@ -4,6 +4,7 @@ import com.kedacom.demo.common.utils.FileOperateUtil;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
@@ -12,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
 
 /**
  * 文件操作控制器
@@ -32,7 +34,7 @@ public class FileLoadController {
     @ResponseBody
     public void downLoad(HttpServletRequest request, HttpServletResponse response, @RequestParam String filePath) {
         try {
-            filePath = filePath.replaceAll(",","\\/");
+            filePath = java.net.URLDecoder.decode(URLDecoder.decode(filePath,"UTF-8"));
             FileOperateUtil.downLoad(request, response, filePath);
         } catch (Exception e) {
             e.printStackTrace();
@@ -45,12 +47,11 @@ public class FileLoadController {
      * @param session
      * @return
      */
-    @RequestMapping(value = "/uploadImage")
+    @RequestMapping(value = "/uploadImage", method=RequestMethod.POST, produces="text/html;charset=UTF-8")
     @ResponseBody
     public String uploadImage(@RequestParam(value = "file", required = false) MultipartFile file,
                               HttpSession session) throws UnsupportedEncodingException {
         String imagePath = FileOperateUtil.uploadFile(file, session);
-        imagePath = java.net.URLEncoder.encode(imagePath,"UTF-8");
         return imagePath;
     }
 }

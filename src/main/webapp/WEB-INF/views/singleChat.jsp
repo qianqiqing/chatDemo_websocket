@@ -190,7 +190,8 @@
     * 展示文件信息
     * */
     function showFile(messageJson){
-        var html = messageJson.from+" ("+getNowFormatDate()+") 上传文件: <a href=\"#\" onclick=\"downLoad('"+messageJson.filePath+"')\">"+messageJson.message+"</a></br></br>";
+        var filePath = messageJson.filePath.replace(/\\/g,",");
+        var html = messageJson.from+" ("+getNowFormatDate()+") 上传文件: <a href=\"#\" onclick=\"downLoad('"+filePath+"')\">"+messageJson.message+"</a></br></br>";
         $("#chat").append(html);
         var chat = $("#chat-view");
         chat.scrollTop(chat[0].scrollHeight);
@@ -265,7 +266,8 @@
      */
     function downLoad(filePath){
         debugger
-        window.location.href = "<%=path%>/fileLoad/downLoad?filePath=" + filePath;
+        filePath = filePath.replace(/,/g,"/");
+        window.location.href = "<%=path%>/fileLoad/downLoad?filePath=" + encodeURI(encodeURI(filePath));
     };
     /*
     * 获取当前时间
