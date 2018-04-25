@@ -19,7 +19,7 @@
                 <div class="am-btn-toolbar">
                     <div class="am-btn-group am-btn-group-xs">
                         <button onclick="edit_user('${user.id}')" class="am-btn am-btn-default am-btn-xs am-text-secondary" data-path="${user.id}"><span class="am-icon-pencil-square-o"></span> 编辑</button>
-                        <button onclick="del_user('${user.id}')" class="am-btn am-btn-default am-btn-xs am-text-danger" data-path="${user.id}"><span class="am-icon-trash-o"></span> 删除</button>
+                        <button <c:if test="${user.role==1}">style="" </c:if> onclick="del_user('${user.id}')" class="am-btn am-btn-default am-btn-xs am-text-danger" data-path="${user.id}"><span class="am-icon-trash-o"></span> 删除</button>
                     </div>
                 </div>
             </td>

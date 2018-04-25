@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -47,9 +48,9 @@ public class FileLoadController {
      * @param session
      * @return
      */
-    @RequestMapping(value = "/uploadImage", method=RequestMethod.POST, produces="text/html;charset=UTF-8")
+    @RequestMapping(value = "/uploadImage", method = RequestMethod.POST, produces="text/html;charset=UTF-8")
     @ResponseBody
-    public String uploadImage(@RequestParam(value = "file", required = false) MultipartFile file,
+    public String uploadImage(@RequestParam("file") CommonsMultipartFile file,
                               HttpSession session) throws UnsupportedEncodingException {
         String imagePath = FileOperateUtil.uploadFile(file, session);
         return imagePath;

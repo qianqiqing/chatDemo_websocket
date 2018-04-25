@@ -20,6 +20,8 @@
             <div class="am-form-group am-form" >
                 <textarea class="" id="message" name="message" rows="5"  placeholder="发送给全体成员..."></textarea>
             </div>
+            <div id="progress">
+            </div>
             <%--预览区--%>
             <div class="" style="float:left;">
                 <input type="file" id="file">
@@ -31,8 +33,8 @@
             <!-- 按钮区 -->
             <div class="am-btn-group am-btn-group-xs" style="float:right;">
                 <button class="am-btn am-btn-default" type="button" onclick="sendMessage()"><span class="am-icon-commenting"></span> 发送文字</button>
-                <button class="am-btn am-btn-default" type="file" onclick="sendFileOrImage('image')"><span class="am-icon-file-image-o"></span> 发送图片</button>
-                <button class="am-btn am-btn-default" type="file" onclick="sendFileOrImage('file')"><span class="am-icon-file-image-o"></span> 发送文件</button>
+                <button class="am-btn am-btn-default" type="file" onclick="sendImage('image')"><span class="am-icon-file-image-o"></span> 发送图片</button>
+                <button class="am-btn am-btn-default" type="file" onclick="sendFile('file')"><span class="am-icon-file-image-o"></span> 发送文件</button>
                 <button class="am-btn am-btn-default" type="button" onclick="clearConsole()"><span class="am-icon-trash-o"></span> 清屏</button>
             </div>
         </section>
@@ -99,6 +101,7 @@
      * 发送信息给后台
      */
     function sendMessage(){
+        $("#progress").html("");
         var message = $("#message").val();
         var to = $("#sendto").text() == "全体成员"? "": $("#sendto").text();
         var obj = {
@@ -110,11 +113,10 @@
         };
         webSocket.send(JSON.stringify(obj));
     }
-    /**
-     * 发送文件给后台
-     */
-    function sendFileOrImage(type){
-        debugger
+    /*
+    * 发送文件给后台
+    * */
+    function sendImage(type){
         var to = $("#sendto").text() == "全体成员"? "": $("#sendto").text();
         var img = document.getElementById('file');
         var file = img.files[0];
@@ -129,7 +131,7 @@
                 type: "POST",
                 data : formData,
                 processData : false,  //必须false才会避开jQuery对 formdata 的默认处理
-                contentType : false,  //必须false才会自动加上正确的Content-Type
+                contentType : false,  //必须false才会自动加上正确的Content-Type,
                 success : function(result){
                     debugger
                     if(result == "文件超过2M"){
@@ -153,6 +155,136 @@
             });
         }
     }
+    /**
+     * 发送文件给后台
+     */
+    function sendFile(type){
+        var $progress = "<div class=\"am-progress am-progress-striped am-progress-sm am-active \" style=\"width: 85%;float: left\">\n" +
+            "                <div id=\"progressStyle\" class=\"am-progress-bar am-progress-bar-secondary\"></div>\n" +
+            "                </div>\n" +
+            "                <div style=\"float: right;\"><span id=\"progressNum\"></span></div>";
+        $("#progress").html($progress);
+        debugger
+        var to = $("#sendto").text() == "全体成员"? "": $("#sendto").text();
+        var img = document.getElementById('file');
+        var file = img.files[0];
+        var fileSize = file.size / 1024;
+        if(fileSize>5000*1000){
+            $("#fileSizeTip").modal();
+        }else{
+            var formData = new FormData();
+            formData.append("file",file);
+            $.ajax({
+                url : webDemo.formatUrl("/fileLoad/uploadImage"),
+                type: "POST",
+                data : formData,
+                processData : false,  //必须false才会避开jQuery对 formdata 的默认处理
+                contentType : false,  //必须false才会自动加上正确的Content-Type,
+                xhr: function(){
+                    myXhr = $.ajaxSettings.xhr();
+                    if(myXhr.upload){
+                        myXhr.upload.addEventListener('progress',function(e) {
+                            if (e.lengthComputable) {
+                                var percent = Math.floor(e.loaded/e.total*100);
+                                if(percent <= 100) {
+                                    document.getElementById('progressStyle').style.width = percent+'%';
+                                    $("#progressNum").html('已上传：'+percent+'%');
+                                }
+                                if(percent >= 100) {
+                                    $("#progressNum").html('上传成功');
+                                }
+                            }
+                        }, false);
+                    }
+                    return myXhr;
+                },
+                success : function(result){
+                    debugger
+                    if(result == "文件超过2M"){
+                        $("#fileSizeTip").modal();
+                    } else if(result == "文件格式不正确"){
+                        $("#fileTypeTip").modal();
+                    }else{
+                        var obj = {
+                            message : file.name,//输入框的内容
+                            from : '${currentUser.name}',//登录成功后保存在Session.attribute中的username
+                            to : to,      //接收人,如果没有则置空,如果有多个接收人则用,分隔
+                            messageType : type,
+                            filePath : result
+                        };
+                        webSocket.send(JSON.stringify(obj));
+                    }
+
+                },
+                error : function(e){
+                }
+            });
+        }
+    }
+    <%--function sendFileOrImage(type){--%>
+        <%--var $progress = "<div class=\"am-progress am-progress-striped am-progress-sm am-active \" style=\"width: 85%;float: left\">\n" +--%>
+            <%--"                <div id=\"progressStyle\" class=\"am-progress-bar am-progress-bar-secondary\"></div>\n" +--%>
+            <%--"                </div>\n" +--%>
+            <%--"                <div style=\"float: right;\"><span id=\"progressNum\"></span></div>";--%>
+        <%--$("#progress").html($progress);--%>
+        <%--debugger--%>
+        <%--var to = $("#sendto").text() == "全体成员"? "": $("#sendto").text();--%>
+        <%--var img = document.getElementById('file');--%>
+        <%--var file = img.files[0];--%>
+        <%--var fileSize = file.size / 1024;--%>
+        <%--if(fileSize>5000*1000){--%>
+            <%--$("#fileSizeTip").modal();--%>
+        <%--}else{--%>
+            <%--var formData = new FormData();--%>
+            <%--formData.append("file",file);--%>
+            <%--$.ajax({--%>
+                <%--url : webDemo.formatUrl("/fileLoad/uploadImage"),--%>
+                <%--type: "POST",--%>
+                <%--data : formData,--%>
+                <%--processData : false,  //必须false才会避开jQuery对 formdata 的默认处理--%>
+                <%--contentType : false,  //必须false才会自动加上正确的Content-Type,--%>
+                <%--xhr: function(){--%>
+                    <%--myXhr = $.ajaxSettings.xhr();--%>
+                    <%--if(myXhr.upload){--%>
+                        <%--myXhr.upload.addEventListener('progress',function(e) {--%>
+                            <%--if (e.lengthComputable) {--%>
+                                <%--var percent = Math.floor(e.loaded/e.total*100);--%>
+                                <%--if(percent <= 100) {--%>
+                                    <%--document.getElementById('progressStyle').style.width = percent+'%';--%>
+                                    <%--$("#progressNum").html('已上传：'+percent+'%');--%>
+                                <%--}--%>
+                                <%--if(percent >= 100) {--%>
+                                    <%--$("#progressNum").html('上传成功');--%>
+                                <%--}--%>
+                            <%--}--%>
+                        <%--}, false);--%>
+                    <%--}--%>
+                    <%--return myXhr;--%>
+                <%--},--%>
+                <%--success : function(result){--%>
+                    <%--debugger--%>
+                    <%--if(result == "文件超过2M"){--%>
+                        <%--$("#fileSizeTip").modal();--%>
+                    <%--} else if(result == "文件格式不正确"){--%>
+                        <%--$("#fileTypeTip").modal();--%>
+                    <%--}else{--%>
+                        <%--var obj = {--%>
+                            <%--message : file.name,//输入框的内容--%>
+                            <%--from : '${currentUser.name}',//登录成功后保存在Session.attribute中的username--%>
+                            <%--to : to,      //接收人,如果没有则置空,如果有多个接收人则用,分隔--%>
+                            <%--messageType : type,--%>
+                            <%--filePath : result--%>
+                        <%--};--%>
+                        <%--webSocket.send(JSON.stringify(obj));--%>
+                    <%--}--%>
+
+                <%--},--%>
+                <%--error : function(e){--%>
+                <%--}--%>
+            <%--});--%>
+        <%--}--%>
+    <%--}--%>
+
     /*
     * 解析后台传来的消息
     */
