@@ -4,6 +4,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.kedacom.demo.common.enums.OperatorEnum;
+import com.kedacom.demo.common.enums.UserStatusEnum;
 import com.kedacom.demo.common.utils.Base64OperateUtil;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -72,13 +74,15 @@ public class LoginController {
 	@RequestMapping (value = "/logOut", method = RequestMethod.GET)
 	public String logOut(HttpServletRequest request){
 		//改变用户状态
-		Integer userId = (Integer) request.getSession().getAttribute("userId");
-		User currentUser = userManageService.getUserById(userId);
-		currentUser.setStatus(0);
-		userManageService.createOrUpdateUser(currentUser);
+		User user = (User) request.getSession().getAttribute("currentUser");
+		User currentUser = userManageService.getUserById(user.getId());
+		if (currentUser != null) {
+			currentUser.setStatus(UserStatusEnum.LOGOUT.getName());
+			userManageService.createOrUpdateUser(currentUser);
+		}
+
 		//移除session
-		request.getSession().removeAttribute("userId");
-		request.getSession().removeAttribute("userName");
+		request.getSession().removeAttribute("currentUser");
 		request.getSession().invalidate();
 		return "login/login";
 	}

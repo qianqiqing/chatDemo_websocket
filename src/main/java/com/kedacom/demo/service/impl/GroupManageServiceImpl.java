@@ -1,5 +1,7 @@
 package com.kedacom.demo.service.impl;
 
+import com.kedacom.demo.common.enums.OperatorEnum;
+import com.kedacom.demo.common.utils.ConstantDefine;
 import com.kedacom.demo.dao.GroupDao;
 import com.kedacom.demo.dao.UserDao;
 import com.kedacom.demo.dao.UserGroupDao;
@@ -46,7 +48,8 @@ public class GroupManageServiceImpl implements GroupManageService {
     public List<GroupTree> getTreeData(List<Group> groupList) {
         List<GroupTree> treeList = new ArrayList<>();
         GroupTree rootNode = new GroupTree();
-        rootNode.setText("用户分组");
+        rootNode.setText(ConstantDefine.rootNode);
+        rootNode.setType(OperatorEnum.GROUP_OPERATE.getName());
         if (groupList != null && groupList.size()>0) {
             rootNode.setChildren(getChildNode(rootNode, groupList));
         }

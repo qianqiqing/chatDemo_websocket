@@ -156,7 +156,7 @@ public class UserManageController {
 	 * @param session
 	 * @return
 	 */
-	@RequestMapping(value = "/uploadImage")
+	@RequestMapping(value = "/uploadImage", method=RequestMethod.POST, produces="text/html;charset=UTF-8")
 	@ResponseBody
 	public String uploadImage(@RequestParam(value = "file", required = false) MultipartFile file,
 							 @RequestParam(value = "userId", required = false) Integer userId,

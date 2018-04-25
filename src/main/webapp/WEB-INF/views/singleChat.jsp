@@ -120,7 +120,7 @@
         var file = img.files[0];
         var fileSize = file.size / 1024;
         if(fileSize>2000){
-            $("#fileTip").modal();
+            $("#fileSizeTip").modal();
         }else{
             var formData = new FormData();
             formData.append("file",file);
@@ -132,14 +132,21 @@
                 contentType : false,  //必须false才会自动加上正确的Content-Type
                 success : function(result){
                     debugger
-                    var obj = {
-                        message : file.name,//输入框的内容
-                        from : '${currentUser.name}',//登录成功后保存在Session.attribute中的username
-                        to : to,      //接收人,如果没有则置空,如果有多个接收人则用,分隔
-                        messageType : type,
-                        filePath : result
-                    };
-                    webSocket.send(JSON.stringify(obj));
+                    if(result == "文件超过2M"){
+                        $("#fileSizeTip").modal();
+                    } else if(result == "文件格式不正确"){
+                        $("#fileTypeTip").modal();
+                    }else{
+                        var obj = {
+                            message : file.name,//输入框的内容
+                            from : '${currentUser.name}',//登录成功后保存在Session.attribute中的username
+                            to : to,      //接收人,如果没有则置空,如果有多个接收人则用,分隔
+                            messageType : type,
+                            filePath : result
+                        };
+                        webSocket.send(JSON.stringify(obj));
+                    }
+
                 },
                 error : function(e){
                 }

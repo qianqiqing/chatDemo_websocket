@@ -119,21 +119,34 @@
         var formData = new FormData();
         var fileElement = document.getElementById('image_file');
         var file = fileElement.files[0];
-        formData.append("file",file);
-        formData.append("userId",userId);
-        $.ajax({
-            url : webDemo.formatUrl("/userManage/uploadImage"),
-            type: "POST",
-            data : formData,
-            processData : false,  //必须false才会避开jQuery对 formdata 的默认处理
-            contentType : false,  //必须false才会自动加上正确的Content-Type
-            success : function(result){
-                initImage();
-            },
-            error : function(e){
-                $("#failed").modal();
-            }
-        })
+        var fileSize = file.size / 1024;
+        if(fileSize>2000){
+            $("#fileSizeTip").modal();
+        }else{
+            formData.append("file",file);
+            formData.append("userId",userId);
+            $.ajax({
+                url : webDemo.formatUrl("/userManage/uploadImage"),
+                type: "POST",
+                data : formData,
+                processData : false,  //必须false才会避开jQuery对 formdata 的默认处理
+                contentType : false,  //必须false才会自动加上正确的Content-Type
+                success : function(result){
+                    debugger
+                    if(result == "文件超过2M"){
+                        $("#fileSizeTip").modal();
+                    } else if(result == "文件格式不正确"){
+                        $("#fileTypeTip").modal();
+                    }else {
+                        initImage();
+                    }
+                },
+                error : function(e){
+                    $("#failed").modal();
+                }
+            })
+        }
+
     }
 
     function initImage(){
@@ -145,7 +158,7 @@
                 userId : userId
             },
             success : function(result){
-                $("#user_image").html(result);
+                    $("#user_image").html(result);
             },
             error : function(e){
             }

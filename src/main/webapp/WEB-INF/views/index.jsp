@@ -70,9 +70,17 @@
         </div>
     </div>
 </div>
-<div class="am-modal am-modal-alert" tabindex="-1" id="fileTip">
+<div class="am-modal am-modal-alert" tabindex="-1" id="fileSizeTip">
     <div class="am-modal-dialog">
         <div class="am-modal-hd"><span>文件大小不能超过2M！</span></div>
+        <div class="am-modal-footer">
+            <span class="am-modal-btn">确定</span>
+        </div>
+    </div>
+</div>
+<div class="am-modal am-modal-alert" tabindex="-1" id="fileTypeTip">
+    <div class="am-modal-dialog">
+        <div class="am-modal-hd"><span>文件格式不正确！</span></div>
         <div class="am-modal-footer">
             <span class="am-modal-btn">确定</span>
         </div>

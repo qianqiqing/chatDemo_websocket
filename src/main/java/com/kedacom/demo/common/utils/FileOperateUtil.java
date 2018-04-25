@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.*;
+import java.util.Arrays;
 
 /**
  * 文件操作公共类
@@ -22,36 +23,45 @@ public class FileOperateUtil {
      * @throws IOException
      */
     public static String uploadFile(MultipartFile file, HttpSession session) {
+        long maxSize = 1024*1024*2;
         String path = null;// 文件路径
         String type = null;// 文件类型
         String trueFilePath = null;
         User currentUser = (User) session.getAttribute("currentUser");
+
         if (file != null) {// 判断上传的文件是否为空
-            String fileName = file.getOriginalFilename();// 文件原名称
-            // 判断文件类型
-            type = fileName.indexOf(".") != -1 ? fileName.substring(fileName.lastIndexOf(".") + 1, fileName.length()) : null;
-            if (type != null) {
-                // 项目在容器中实际发布运行的根路径下创建loadFiles保存每个session上传的文件
-                String uploadPath = session.getServletContext().getRealPath(File.separator)
-                        + ConstantDefine.LOAD_FILE_PATH
-                        + File.separator
-                        + currentUser.getId()
-                        + File.separator;
-                if (!(new File(uploadPath).exists())) {
-                    File uploadPathFile = new File(uploadPath);
-                    boolean sucess = uploadPathFile.mkdirs();
-                }
-                // 自定义的文件名称 ：上传时间+文件名（防止上传文件名相同文件不同的文件覆盖问题）
-                String trueFileName = String.valueOf(System.currentTimeMillis()) + "_" + fileName;
-                //保存在数据库中的路径,供页面展示
-                trueFilePath = ConstantDefine.LOAD_FILE_PATH + File.separator + currentUser.getId() + File.separator + trueFileName;
-                // 设置存放图片文件的路径
-                path = uploadPath + trueFileName;
-                // 转存文件到指定的路径
-                try {
-                    file.transferTo(new File(path));
-                } catch (IOException e) {
-                    e.printStackTrace();
+            long fileSize = file.getSize();
+            if (fileSize > maxSize) {
+                return ConstantDefine.FILE_SIZE_ERROR;
+            } else {
+                String fileName = file.getOriginalFilename();// 文件原名称
+                // 判断文件类型
+                type = fileName.indexOf(".") != -1 ? fileName.substring(fileName.lastIndexOf(".") + 1, fileName.length()) : null;
+                if (type == null || !Arrays.asList(ConstantDefine.FILETYPE.split(",")).contains(type)) {
+                    return ConstantDefine.FILE_TYPE_ERROR;
+                } else {
+                    // 项目在容器中实际发布运行的根路径下创建loadFiles保存每个session上传的文件
+                    String uploadPath = session.getServletContext().getRealPath(File.separator)
+                            + ConstantDefine.LOAD_FILE_PATH
+                            + File.separator
+                            + currentUser.getId()
+                            + File.separator;
+                    if (!(new File(uploadPath).exists())) {
+                        File uploadPathFile = new File(uploadPath);
+                        boolean sucess = uploadPathFile.mkdirs();
+                    }
+                    // 自定义的文件名称 ：上传时间+文件名（防止上传文件名相同文件不同的文件覆盖问题）
+                    String trueFileName = String.valueOf(System.currentTimeMillis()) + "_" + fileName;
+                    //保存在数据库中的路径,供页面展示
+                    trueFilePath = ConstantDefine.LOAD_FILE_PATH + File.separator + currentUser.getId() + File.separator + trueFileName;
+                    // 设置存放图片文件的路径
+                    path = uploadPath + trueFileName;
+                    // 转存文件到指定的路径
+                    try {
+                        file.transferTo(new File(path));
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                 }
             }
         }
