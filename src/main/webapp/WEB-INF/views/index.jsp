@@ -21,9 +21,13 @@
 
     <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
         <ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list">
+            <div style="width: 60px;height: 60px;float: left" id="userImage">
+
+            </div>
             <li class="am-dropdown" data-am-dropdown>
+
                 <a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
-                    <span class="am-icon-users"></span> ${currentUser.name} <span class="am-icon-caret-down"></span>
+                     ${currentUser.name} <span class="am-icon-caret-down"></span>
                 </a>
                 <ul class="am-dropdown-content">
                     <li><a id="logout" href="#"><span class="am-icon-power-off"></span> 退出</a></li>
@@ -31,18 +35,19 @@
             </li>
         </ul>
     </div>
+
 </header>
 <%--主体部分--%>
 <div class="am-cf admin-main">
     <!-- sidebar start -->
     <div class="admin-sidebar">
         <ul class="am-list admin-sidebar-list">
+            <li><a id="chatroom" href="#"><span class="am-icon-pencil-square-o"></span> 聊天室</a></li>
             <li><a id="baseInfo" href="#"><span class="am-icon-home"></span> 个人资料</a></li>
             <c:if test="${currentUser.role == 1}">
                 <li><a id="userList" href="#"><span class="am-icon-table"></span> 用户列表</a></li>
                 <li><a id="userGroup" href="#"><span class="am-icon-th"></span> 分组管理</a></li>
             </c:if>
-            <li><a id="chatroom" href="#"><span class="am-icon-pencil-square-o"></span> 聊天室</a></li>
         </ul>
     </div>
     <!-- sidebar end -->
@@ -110,8 +115,22 @@
 <script>
     $(function(){
         initIndex();
+        initImage();
         $("#baseInfo").on("click",function(){
-            initIndex();
+            var id = "${currentUser.id}";
+            $.ajax({
+                url : webDemo.formatUrl("/userManage/baseInfoIndex"),
+                type : "GET",
+                data : {
+                    id : id
+                },
+                success : function(result){
+                    $(".admin-main .admin-content").html(result);
+                },
+                error : function(e){
+
+                }
+            });
         });
 
         $("#userList").on("click",function(){
@@ -138,15 +157,29 @@
         }
     };
 
+    function initImage(){
+        var userId = "${currentUser.id}";
+        $.ajax({
+            url : webDemo.formatUrl("/userManage/initImage"),
+            type: "GET",
+            data : {
+                userId : userId
+            },
+            success : function(result){
+                $("#userImage").html(result);
+            },
+            error : function(e){
+            }
+        })
+    }
+
     function initIndex(){
         debugger
         var id = "${currentUser.id}";
         $.ajax({
-            url : webDemo.formatUrl("/userManage/baseInfoIndex"),
+            url : webDemo.formatUrl("/chat/chatRoomIndex"),
             type : "GET",
-            data : {
-                id : id
-            },
+            data : {},
             success : function(result){
                 $(".admin-main .admin-content").html(result);
             },

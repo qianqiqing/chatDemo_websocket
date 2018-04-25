@@ -28,7 +28,7 @@
             </div>
             <!-- 接收者 -->
             <div class="" style="display: none">
-                <span id="sendto"></span>
+                <span id="sendto">全体成员</span>
             </div>
             <!-- 按钮区 -->
             <div class="am-btn-group am-btn-group-xs" style="float:right;">
@@ -43,12 +43,12 @@
     <!-- 列表区 -->
     <div class="am-panel am-panel-default" style="float:right;width: 20%;">
         <div class="am-panel-hd">
-            <h3 class="am-panel-title">在线列表 [<span id="onlinenum"></span>]<button style="float: right" onclick="addChat('全体成员')" class="am-btn am-btn-xs am-btn-primary am-round"><span class="am-icon-phone"></span> 群聊</button></h3>
+            <h3 class="am-panel-title">在线列表 [<span id="onlinenum">${size}</span>]<button style="float: right" onclick="addChat('全体成员')" class="am-btn am-btn-xs am-btn-primary am-round"><span class="am-icon-phone"></span> 群聊</button></h3>
         </div>
         <ul class="am-list am-list-static am-list-striped" id="onLineUserlist">
             <c:forEach var="user" items="${onLineUser}">
                <li>${user.name}
-                   <button type="button" style="float: right" class="am-btn am-btn-xs am-btn-primary am-round" onclick="addChat(${user.name}) ">
+                   <button type="button" style="float: right" class="am-btn am-btn-xs am-btn-primary am-round" onclick="addChat('${user.name}') ">
                        <span class="am-icon-phone">私聊 </span>
                    </button>
                </li>
@@ -311,7 +311,8 @@
      * 展示会话信息
      */
     function showChat(message){
-        var html = message.from+" ("+getNowFormatDate()+") 说: "+message.message+"</br></br>";
+        var to = $("#sendto").text();
+        var html = "<font color='#a52a2a'><font color='green'>"+ message.from+"</font> ("+getNowFormatDate()+") 对 <font color='green'>" + to + "</font> 说:</font></br>"+message.message+"</br></br>";
         $("#chat").append(html);
         $("#message").val("");  //清空输入区
         var chat = $("#chat-view");
@@ -321,6 +322,14 @@
      * 展示提示信息
      */
     function showNotice(notice){
+        debugger
+        var sendTo = $("#sendto").text();
+        var obj = notice.split("]");
+        if("离开了聊天室" == obj[1]){
+            if(obj[0].replace("[","") == sendTo){
+                addChat("全体成员");
+            }
+        }
         $("#chat").append("<div><p class=\"am-text-success\" style=\"text-align:center\"><span class=\"am-icon-bell\"></span> "+notice+"</p></div>");
         var chat = $("#chat-view");
         chat.scrollTop(chat[0].scrollHeight);   //让聊天区始终滚动到最下面
@@ -329,8 +338,9 @@
     * 展示文件信息
     * */
     function showFile(messageJson){
+        var to = $("#sendto").text();
         var filePath = messageJson.filePath.replace(/\\/g,",");
-        var html = messageJson.from+" ("+getNowFormatDate()+") 上传文件: <a href=\"#\" onclick=\"downLoad('"+filePath+"')\">"+messageJson.message+"</a></br></br>";
+        var html = "<font color='#a52a2a'><font color='green'>"+messageJson.from+"</font> ("+getNowFormatDate()+") 给 <font color='green'>" +to+ "</font> 发送文件:</font></br> <a href=\"#\" onclick=\"downLoad('"+filePath+"')\">"+messageJson.message+"</a></br></br>";
         $("#chat").append(html);
         var chat = $("#chat-view");
         chat.scrollTop(chat[0].scrollHeight);
@@ -340,8 +350,9 @@
      */
     function showImage(messageJson) {
         debugger;
+        var to = $("#sendto").text();
         var imagePath = decodeURI(messageJson.filePath).replace(/,/g,"\/");
-        var html = messageJson.from+" ("+getNowFormatDate()+") 说: ";
+        var html = "<font color='#a52a2a'><font color='green'>"+messageJson.from+"</font> ("+getNowFormatDate()+") 对 <font color='green'>" +to+ "</font> 说: </font></br>";
         var img = document.createElement("img");
         img.src = "${ctx}/demo/"+imagePath+"";
         $("#chat").append(html).append(img).append("</br></br>");
@@ -375,13 +386,13 @@
         debugger
         var sendto = $("#sendto");
         var receive = sendto.text();
-        if(user == ""){
-            receive = "";
+        if(user == "全体成员"){
+            receive = "全体成员";
         }else {
-            if(receive!=""){
+            if(receive!="全体成员"){
                 receive += ","+user;
             }else{
-                receive += user;
+                receive = user;
             }
         }
         sendto.text(receive);

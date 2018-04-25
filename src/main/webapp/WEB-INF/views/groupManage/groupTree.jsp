@@ -15,7 +15,13 @@
 					e.preventDefault();
 					$(this).tree('select',node.target);
 					if(node.type == 'group'){
-                        $('#mm').menu('show',{
+                        $('#remove').menu('show',{
+                            left: e.pageX,
+                            top: e.pageY
+                        });
+					};
+					if(node.type=='root'){
+					$('#add').menu('show',{
                             left: e.pageX,
                             top: e.pageY
                         });
@@ -23,10 +29,13 @@
 				}
 			"></ul>
 </div>
-<div id="mm" class="easyui-menu" style="width:120px;display: none">
+<div id="add" class="easyui-menu" style="width:120px;display: none">
     <div onclick="append()" data-options="iconCls:'icon-add'">新增</div>
+</div>
+<div id="remove" class="easyui-menu" style="width:120px;display: none">
     <div onclick="removeit()" data-options="iconCls:'icon-remove'">删除</div>
 </div>
+<div>
 <script type="text/javascript">
     //节点点击事件
     function treeClick(node) {

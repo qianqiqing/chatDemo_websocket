@@ -8,7 +8,8 @@ public enum OperatorEnum {
     CREATE("create", 1),
     EDIT("edit", 2),
     USER_OPERATE("user",3),
-    GROUP_OPERATE("group",4);
+    ROOT_NODE("root",4),
+    GROUP_OPERATE("group",5);
     // 成员变量
     private String name;
     private int index;

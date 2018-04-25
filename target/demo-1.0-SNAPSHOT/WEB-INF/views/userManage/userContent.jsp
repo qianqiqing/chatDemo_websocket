@@ -6,8 +6,8 @@
             <td><input id="user_selected" type="checkbox" value="${user.id}" /></td>
             <td>${user.name}</td>
             <td>
-                <c:if test="${user.status == 1}"><font color="green">已登录</font></c:if>
-                <c:if test="${user.status == 0}"><font color="red">未登录</font></c:if>
+                <c:if test="${user.status == 1}"><font color="green">在线</font></c:if>
+                <c:if test="${user.status == 0}"><font color="red">离线</font></c:if>
             </td>
             <td>
                 <c:if test="${user.role == 1}">管理员</c:if>
@@ -18,8 +18,8 @@
             <td>
                 <div class="am-btn-toolbar">
                     <div class="am-btn-group am-btn-group-xs">
-                        <button onclick="edit_user('${user.id}')" class="am-btn am-btn-default am-btn-xs am-text-secondary" data-path="${user.id}"><span class="am-icon-pencil-square-o"></span> 编辑</button>
-                        <button onclick="del_user('${user.id}')" class="am-btn am-btn-default am-btn-xs am-text-danger" data-path="${user.id}"><span class="am-icon-trash-o"></span> 删除</button>
+                        <button onclick="edit_user('${user.id}')" <c:if test="${user.role==0}">disabled="disabled" </c:if> class="am-btn am-btn-default am-btn-xs am-text-secondary" data-path="${user.id}"><span class="am-icon-pencil-square-o"></span> 编辑</button>
+                        <button <c:if test="${user.role==0}">disabled="disabled" </c:if> onclick="del_user('${user.id}')" class="am-btn am-btn-default am-btn-xs am-text-danger" data-path="${user.id}"><span class="am-icon-trash-o"></span> 删除</button>
                     </div>
                 </div>
             </td>

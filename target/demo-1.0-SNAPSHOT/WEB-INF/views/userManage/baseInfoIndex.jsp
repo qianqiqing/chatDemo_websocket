@@ -64,16 +64,17 @@
                     </div>
                 </div>
 
-                <div class="am-form-group">
-                    <label class="am-u-sm-3 am-form-label">角色权限</label>
-                    <div class="am-u-sm-9">
-                        <select id="edit_role">
-                            <option value="1" <c:if test="${user.role == 1}">selected</c:if>>管理员</option>
-                            <option value="0" <c:if test="${user.role == 0}">selected</c:if>>普通用户</option>
-                        </select>
+                <c:if test="${user.role == 1}">
+                    <div class="am-form-group">
+                        <label class="am-u-sm-3 am-form-label">角色权限</label>
+                        <div class="am-u-sm-9">
+                            <select id="edit_role">
+                                <option value="1" <c:if test="${user.role == 1}">selected</c:if>>管理员</option>
+                                <option value="0" <c:if test="${user.role == 0}">selected</c:if>>普通用户</option>
+                            </select>
+                        </div>
                     </div>
-                </div>
-
+                </c:if>
                 <div class="am-form-group">
                     <div class="am-u-sm-9 am-u-sm-push-3">
                         <button type="button" class="am-btn am-btn-primary" onclick="saveModify()">保存修改</button>
@@ -158,7 +159,9 @@
                 userId : userId
             },
             success : function(result){
-                    $("#user_image").html(result);
+                debugger
+                $("#user_image").html(result);
+                $("#userImage").html(result);
             },
             error : function(e){
             }

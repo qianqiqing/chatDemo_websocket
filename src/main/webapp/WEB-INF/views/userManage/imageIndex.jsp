@@ -7,4 +7,4 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<img id="user_image" class="am-img-circle am-img-thumbnail" src="${ctx}/demo/${imagePath}" alt=""/>
+<img class="am-img-circle am-img-thumbnail" src="${ctx}/demo/${imagePath}" alt=""/>

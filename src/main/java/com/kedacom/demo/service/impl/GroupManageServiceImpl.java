@@ -49,7 +49,7 @@ public class GroupManageServiceImpl implements GroupManageService {
         List<GroupTree> treeList = new ArrayList<>();
         GroupTree rootNode = new GroupTree();
         rootNode.setText(ConstantDefine.rootNode);
-        rootNode.setType(OperatorEnum.GROUP_OPERATE.getName());
+        rootNode.setType(OperatorEnum.ROOT_NODE.getName());
         if (groupList != null && groupList.size()>0) {
             rootNode.setChildren(getChildNode(rootNode, groupList));
         }
@@ -128,7 +128,7 @@ public class GroupManageServiceImpl implements GroupManageService {
             if (Objects.equals(group.getParentId(),node.getId())) {    //是子节点
                 childNode.setId(group.getId());
                 childNode.setText(group.getGroupName());
-                childNode.setType("group");
+                childNode.setType(OperatorEnum.GROUP_OPERATE.getName());
                 childNode.setChildren(this.getChildNode(childNode,groupList));
                 childNodeList.add(childNode);
             }

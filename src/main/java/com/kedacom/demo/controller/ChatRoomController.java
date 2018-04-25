@@ -28,6 +28,7 @@ public class ChatRoomController {
         List<User> onLineUser = userManageService.onLineUser();
         ModelAndView view = new ModelAndView("singleChat");
         view.addObject("onLineUser" , onLineUser);
+        view.addObject("size" , onLineUser.size());
         return view;
     }
 }
